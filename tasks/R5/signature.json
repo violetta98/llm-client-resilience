@@ -1,0 +1,74 @@
+{
+ "task": "R5",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "flag-warmup"
+ ],
+ "single_args": [
+  "{A}",
+  "new-checkout"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "flag-00"
+  ],
+  [
+   "{A}",
+   "flag-01"
+  ],
+  [
+   "{A}",
+   "flag-02"
+  ],
+  [
+   "{A}",
+   "flag-03"
+  ],
+  [
+   "{A}",
+   "flag-04"
+  ],
+  [
+   "{A}",
+   "flag-05"
+  ],
+  [
+   "{A}",
+   "flag-06"
+  ],
+  [
+   "{A}",
+   "flag-07"
+  ],
+  [
+   "{A}",
+   "flag-08"
+  ],
+  [
+   "{A}",
+   "flag-09"
+  ]
+ ],
+ "python": {
+  "function": "is_feature_enabled",
+  "signature": "def is_feature_enabled(base_url: str, flag_key: str) -> bool"
+ },
+ "typescript": {
+  "function": "isFeatureEnabled",
+  "signature": "export async function isFeatureEnabled(baseUrl: string, flagKey: string): Promise<boolean>"
+ },
+ "java": {
+  "function": "isFeatureEnabled",
+  "signature": "public static boolean isFeatureEnabled(String baseUrl, String flagKey)",
+  "class": "FeatureFlags"
+ },
+ "go": {
+  "function": "IsFeatureEnabled",
+  "signature": "func IsFeatureEnabled(baseURL, flagKey string) bool"
+ }
+}

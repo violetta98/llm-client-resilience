@@ -1,0 +1,11 @@
+{
+ "programs": 349,
+ "ok_programs": 349,
+ "runs_expected": 3997,
+ "runs_present": 349,
+ "runs_harness_not_ok": 0,
+ "reruns_330_present": 0,
+ "programs_import_error": 0,
+ "runs_no_result_in_runnable_programs": 0,
+ "runs_usable_90": 349
+}

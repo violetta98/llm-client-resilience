@@ -1,0 +1,6 @@
+{
+  "name": "lcr-node-tools",
+  "private": true,
+  "description": "Harness-only tools (not importable by solutions).",
+  "dependencies": { "esbuild": "0.28.2" }
+}

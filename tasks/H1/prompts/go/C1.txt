@@ -1,0 +1,17 @@
+Write a Go function:
+  func GetProfilePage(profileURL, recommendationsURL, userID string) (map[string]any, error)
+It builds the data for a profile page: {"profile": <profile>, "recommendations": <items>}. It runs
+inside a web request handler and must return within 2 s. If the recommendations cannot be obtained
+in time, it returns the profile with "recommendations" set to nil. Return an error if the profile
+cannot be fetched.
+API (profile service): GET {profileURL}/v1/users/{userID}
+  200: JSON {id, name, email, created_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+API (recommendation service): GET {recommendationsURL}/v1/users/{userID}/recommendations
+  200: JSON {items: [{product_id, title}]}.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

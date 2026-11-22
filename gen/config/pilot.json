@@ -1,0 +1,100 @@
+{
+ "run": "pilot",
+ "_note": "E5 pilot (brief): 3 pilot tasks x 2 free models x C0 x 2 languages x 5 samples = 60 requests. Free open-weight models via OpenRouter (key: OPENROUTER_API_KEY). Python and Go: the RQ5 languages, and Go exercises the compile/reflection path.",
+ "conditions": [
+  "C0"
+ ],
+ "tasks": [
+  "P1",
+  "P2",
+  "P3"
+ ],
+ "langs": [
+  "python",
+  "go"
+ ],
+ "samples": 5,
+ "models": [
+  {
+   "id": "nemotron-3-ultra",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 16000,
+    "reasoning": {
+     "effort": "medium"
+    }
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 0,
+    "output": 0
+   },
+   "min_interval_s": 4,
+   "request_timeout_s": 600,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300
+  },
+  {
+   "id": "gemma-4-31b",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "google/gemma-4-31b-it:free",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 16000
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 0,
+    "output": 0
+   },
+   "min_interval_s": 4,
+   "request_timeout_s": 600,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300,
+   "note": "2026-11-05: free endpoint rate-limited upstream (HTTP 429) for >30 min; replaced in the pilot by north-mini-code, see reports/pilot.md"
+  },
+  {
+   "id": "north-mini-code",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "cohere/north-mini-code:free",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 16000
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 0,
+    "output": 0
+   },
+   "min_interval_s": 4,
+   "request_timeout_s": 600,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300,
+   "note": "2026-11-05: max_tokens 16000 truncated in reasoning (finish_reason length, no code) on sample 1; stopped, continued as north-mini-code-64k"
+  },
+  {
+   "id": "north-mini-code-64k",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "cohere/north-mini-code:free",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 64000
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 0,
+    "output": 0
+   },
+   "min_interval_s": 4,
+   "request_timeout_s": 1200,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300
+  }
+ ]
+}

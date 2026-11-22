@@ -1,0 +1,7 @@
+fits:
+       outcome                  step    ok    n events
+1 s3_no_return                  full  TRUE 2531     78
+2      overrun                  full FALSE 1120    161
+3      overrun     drop (1|llm:task)  TRUE 1120    161
+4 unsafe_write task fixed (protocol) FALSE  469     14
+contrasts: 30 rows -> analysis/out/main-jdk26-hybrid/primary_contrasts.csv 

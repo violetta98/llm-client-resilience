@@ -1,0 +1,12 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function deliverWebhook(endpointUrl: string, event: Record<string, unknown>): Promise<void>
+It delivers the event to the customer's webhook endpoint (POST of the event as JSON). It runs in a
+worker with a time limit of 30 s per event: it must return or throw within 30 s. Throw a
+DeliveryError if the event cannot be delivered.
+API (webhook receiver): POST {endpointUrl}, JSON body: the event {id, type, created_at, data}
+  2xx: delivered. 4xx other than 429: rejected. The receiver deduplicates deliveries by the event
+  id.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Respond with the complete code in a single code block.

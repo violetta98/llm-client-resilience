@@ -1,0 +1,57 @@
+lang,group,returned_runs,closed,kept_open,kept_open_share
+all,all,1699,1593,106,6.2
+all,none,23,17,6,26.1
+all,per-read or until headers only,209,166,43,20.6
+all,whole-call deadline,1467,1410,57,3.9
+go,all,567,567,0,0.0
+go,kind: context.WithTimeout,221,221,0,0.0
+go,kind: context.WithTimeout;http.Client.Timeout,280,280,0,0.0
+go,kind: context.WithTimeout;resty SetTimeout,1,1,0,0.0
+go,kind: http.Client.Timeout,56,56,0,0.0
+go,kind: http.Client.Timeout;resty SetTimeout,1,1,0,0.0
+go,kind: none,6,6,0,0.0
+go,kind: resty SetTimeout,2,2,0,0.0
+go,none,6,6,0,0.0
+go,whole-call deadline,561,561,0,0.0
+java,all,237,218,19,8.0
+java,kind: Future.get(timeout),199,186,13,6.5
+java,kind: Future.get(timeout);callTimeout,1,1,0,0.0
+java,kind: Future.get(timeout);orTimeout,1,0,1,100.0
+java,kind: orTimeout,5,0,5,100.0
+java,kind: per-read or until headers only,31,31,0,0.0
+java,per-read or until headers only,31,31,0,0.0
+java,whole-call deadline,206,187,19,9.2
+python,all,291,220,71,24.4
+python,kind: Future.result(timeout),68,50,18,26.5
+python,kind: Future.result(timeout);aiohttp.ClientTimeout(total);asyncio.timeout,2,2,0,0.0
+python,kind: Future.result(timeout);aiohttp.ClientTimeout(total);asyncio.wait_for,1,0,1,100.0
+python,kind: Future.result(timeout);asyncio.timeout,4,4,0,0.0
+python,kind: Future.result(timeout);asyncio.wait_for,3,3,0,0.0
+python,kind: aiohttp.ClientTimeout(total),3,0,3,100.0
+python,kind: aiohttp.ClientTimeout(total);asyncio.timeout,3,1,2,66.7
+python,kind: aiohttp.ClientTimeout(total);asyncio.timeout_at,1,1,0,0.0
+python,kind: aiohttp.ClientTimeout(total);asyncio.wait_for,6,2,4,66.7
+python,kind: asyncio.timeout,8,8,0,0.0
+python,kind: asyncio.timeout_at,1,1,0,0.0
+python,kind: asyncio.wait_for,12,12,0,0.0
+python,kind: none,1,1,0,0.0
+python,kind: per-read or until headers only,178,135,43,24.2
+python,none,1,1,0,0.0
+python,per-read or until headers only,178,135,43,24.2
+python,whole-call deadline,112,84,28,25.0
+typescript,all,604,588,16,2.6
+typescript,kind: AbortController+setTimeout,159,155,4,2.5
+typescript,kind: AbortController+setTimeout;AbortSignal.timeout,51,51,0,0.0
+typescript,kind: AbortController+setTimeout;AbortSignal.timeout;Promise.race+setTimeout,1,1,0,0.0
+typescript,kind: AbortController+setTimeout;Promise.race+setTimeout,7,7,0,0.0
+typescript,kind: AbortController+setTimeout;Promise.race+setTimeout;ky timeout,1,1,0,0.0
+typescript,kind: AbortController+setTimeout;got timeout.request,1,1,0,0.0
+typescript,kind: AbortSignal.timeout,333,332,1,0.3
+typescript,kind: AbortSignal.timeout;Promise.race+setTimeout,6,6,0,0.0
+typescript,kind: AbortSignal.timeout;ky timeout,2,2,0,0.0
+typescript,kind: Promise.race+setTimeout,6,4,2,33.3
+typescript,kind: got timeout.request,10,10,0,0.0
+typescript,kind: ky timeout,11,8,3,27.3
+typescript,kind: none,16,10,6,37.5
+typescript,none,16,10,6,37.5
+typescript,whole-call deadline,588,578,10,1.7

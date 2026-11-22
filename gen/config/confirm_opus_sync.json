@@ -1,0 +1,52 @@
+{
+ "run": "confirm",
+ "note": "D46: the last claude-opus-5.5 requests sent synchronously at list price (twice the batch price); same model, parameters and prompts. Run cap raised by the author from 25 to 27 USD.",
+ "budget_usd": 25.0,
+ "conditions": [
+  "C0",
+  "C2"
+ ],
+ "tasks": [
+  "R6",
+  "W5",
+  "B5",
+  "H4"
+ ],
+ "langs": [
+  "python",
+  "typescript",
+  "java",
+  "go"
+ ],
+ "samples": 3,
+ "models": [
+  {
+   "id": "claude-opus-5.5",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "anthropic/claude-opus-5.5",
+   "snapshot": "anthropic/claude-opus-5.5-20260921",
+   "mode": "sync",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 64000
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 4.0,
+    "output": 20.0
+   },
+   "max_output_tokens_for_budget": 64000,
+   "request_timeout_s": 1200,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300,
+   "min_interval_s": 1,
+   "high_scenario_usd": 43.84,
+   "note": "seed not supported by the API (dropped)",
+   "batch_provider_only": [
+    "anthropic"
+   ]
+  }
+ ],
+ "provider_policy": "first-party endpoint of the model's vendor where the gateway has one; otherwise the cheapest unquantized (bf16) endpoint; pinned with allow_fallbacks=false; provider_returned is logged per response"
+}

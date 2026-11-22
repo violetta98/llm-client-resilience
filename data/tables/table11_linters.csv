@@ -1,0 +1,4 @@
+tool,model,solutions,failing,failing_flagged,passing,false_alarms,recall,false_alarm_rate
+bandit_B113,all,749,440,5,309,4,0.0114,0.0129
+ruff_S113,all,749,440,4,309,1,0.0091,0.0032
+golangci_noctx,all,577,11,9,566,44,0.8182,0.0777

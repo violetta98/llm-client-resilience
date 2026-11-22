@@ -1,0 +1,36 @@
+id,label,run,verdict
+B01,"S4 hang, Python",data/main/runs/C2/qwen3-coder-next/B4/python/3/S4,ok
+B02,"S4 hang, Python",data/main/runs/C0/kimi-k3/W4/python/2/S4,unsure
+B03,"S4 hang, Java",data/main/runs/C0/kimi-k3/W2/java/2/S4,ok
+B04,"S4 hang, Java",data/main/runs/C2/gemini-4-argon/W4/java/3/S4,ok
+B05,S4 returned (no hang),data/main/runs/C0/granite-4.2-8b/B4/typescript/1/S4,ok
+B06,S4 returned (no hang),data/main/runs/C0/qwen3-coder-next/R3/typescript/2/S4,ok
+B07,"S3 hang, TypeScript",data/main/runs/C2/granite-4.2-8b/W2/typescript/2/S3,ok
+B08,"S3 hang, TypeScript",data/main/runs/C0/qwen3-coder-next/R3/typescript/3/S3,ok
+B09,"Overrun, H task",data/main/runs/C0/qwen3-coder-next/H1/typescript/3/S1,ok
+B10,"Overrun, H task",data/main/runs/C2/qwen3-coder-next/H2/python/2/S1,unsure
+B11,"Rapid retries S9, Java",data/main/runs/C2/kimi-k3/R4/java/1/S9,unsure
+B12,"Rapid retries S9, Java",data/main/runs/C2/claude-opus-5.5/H1/java/3/S9,ok
+B13,"S9 Java, not rapid (connect-retry pairs)",data/main/runs/C2/claude-opus-5.5/R1/java/1/S9,ok
+B14,"S9 Java, not rapid (connect-retry pairs)",data/main/runs/C2/gemini-4-argon/R3/java/2/S9,ok
+B15,"Rapid retries S9, Python/Go",data/main/runs/C2/gpt-6.1-sol/H2/go/3/S9,ok
+B16,"Rapid retries S9, Python/Go",data/main/runs/C2/gpt-6.1-sol/R3/go/2/S9,ok
+B17,Excessive retries S7,data/main/runs/C2/gemini-4-argon/B4/go/2/S7,ok
+B18,Excessive retries S7,data/main/runs/C2/gemini-4-argon/R4/python/3/S7,ok
+B19,Retry-After violation S6b,data/main/runs/C0/gemini-4-argon/R4/python/2/S6b,wrong
+B20,Retry-After violation S6b,data/main/runs/C0/gemini-4-argon/R5/typescript/3/S6b,wrong
+B21,Retry-After respected S6a,data/main/runs/C2/deepseek-v4.1-flash/B2/java/2/S6a,ok
+B22,Retry-After respected S6a,data/main/runs/C2/kimi-k3/W3/python/3/S6a,ok
+B23,Synchronized retries S7,data/main/runs/C2/gpt-6.1-sol/H2/python/2/S7,ok
+B24,Synchronized retries S7,data/main/runs/C2/gemini-4-argon/R4/python/3/S7,ok
+B25,Not synchronized S7,data/main/runs/C0/gemini-4-argon/R3/java/2/S7,ok
+B26,Not synchronized S7,data/main/runs/C2/claude-haiku-5.5/W3/go/2/S7,ok
+B27,Unsafe write S8,data/main/runs/C2/granite-4.2-8b/W2/typescript/1/S8,ok
+B28,Unsafe write S8,data/main/runs/C0/qwen3-coder-next/W2/python/1/S8,ok
+B29,Safe write S8 (W1 with key),data/main/runs/C0/claude-opus-5.5/W1/java/1/S8,ok
+B30,Safe write S8 (W1 with key),data/main/runs/C2/claude-haiku-5.5/W1/python/1/S8,ok
+B31,Silent failure H3,data/main/runs/C0/claude-haiku-5.5/H3/python/1/S9,unsure
+B32,Silent failure H3,data/main/runs/C2/claude-haiku-5.5/H3/python/2/S0,unsure
+B33,"Late requests, TypeScript",data/main/runs/C0/claude-opus-5.5/B2/typescript/3/S1,ok
+B34,"Late requests, TypeScript",data/main/runs/C0/deepseek-v4.1-flash/W1/typescript/2/S2,ok
+B35,S0 correct,data/main/runs/C0/qwen3-coder-next/W1/java/3/S0,ok

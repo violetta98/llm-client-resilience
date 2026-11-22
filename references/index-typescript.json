@@ -1,0 +1,200 @@
+[
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R1/typescript/solution.ts"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R1/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R1/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R1/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R1/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "R2",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R2/typescript/solution.ts"
+ },
+ {
+  "task": "R3",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R3/typescript/solution.ts"
+ },
+ {
+  "task": "R4",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R4/typescript/solution.ts"
+ },
+ {
+  "task": "R5",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R5/typescript/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/W1/typescript/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W1/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W1/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W1/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W1/typescript/UNSAFE_POST_RETRY/solution.ts"
+ },
+ {
+  "task": "W1",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W1/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/W2/typescript/solution.ts"
+ },
+ {
+  "task": "W3",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/W3/typescript/solution.ts"
+ },
+ {
+  "task": "W4",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/W4/typescript/solution.ts"
+ },
+ {
+  "task": "B1",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/B1/typescript/solution.ts"
+ },
+ {
+  "task": "B2",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/B2/typescript/solution.ts"
+ },
+ {
+  "task": "B2",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B2/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "B2",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B2/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "B2",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B2/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "B2",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B2/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "B3",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/B3/typescript/solution.ts"
+ },
+ {
+  "task": "B4",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/B4/typescript/solution.ts"
+ },
+ {
+  "task": "H1",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/H1/typescript/solution.ts"
+ },
+ {
+  "task": "H2",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/H2/typescript/solution.ts"
+ },
+ {
+  "task": "H3",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/H3/typescript/solution.ts"
+ },
+ {
+  "task": "H3",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H3/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "H3",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H3/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "H3",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H3/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "H3",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H3/typescript/FIXED_BACKOFF/solution.ts"
+ }
+]

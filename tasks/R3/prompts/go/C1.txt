@@ -1,0 +1,12 @@
+Write a Go function:
+  func DownloadReport(baseURL, reportID, destPath string) (int, error)
+It downloads the report file and saves it to destPath, and returns the number of bytes written.
+Return an error if the report cannot be downloaded.
+API: GET {baseURL}/v1/reports/{reportID}/download
+  200: the file (application/octet-stream, with Content-Length; reports are under 1 MB). 404: report
+  not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

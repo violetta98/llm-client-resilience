@@ -1,0 +1,194 @@
+[
+ {
+  "program": "reference",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "reference",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "reference",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "reference",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant NO_TIMEOUT",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "mutant NO_TIMEOUT",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "mutant NO_TIMEOUT",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant NO_TIMEOUT",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant PER_READ_ONLY",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "mutant PER_READ_ONLY",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant PER_READ_ONLY",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant PER_READ_ONLY",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant IGNORE_RETRY_AFTER",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant IGNORE_RETRY_AFTER",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant IGNORE_RETRY_AFTER",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "FAIL",
+  "detail": "retried after 0.49 s, Retry-After 2.0 s"
+ },
+ {
+  "program": "mutant IGNORE_RETRY_AFTER",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant TIGHT_LOOP",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant TIGHT_LOOP",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant TIGHT_LOOP",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "mutant TIGHT_LOOP",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "FAIL",
+  "detail": "56 connect calls in the first 0.5 s"
+ },
+ {
+  "program": "docs requests timeout=5",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "docs requests timeout=5",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs requests timeout=5",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs requests timeout=5",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs httpx timeout=10.0",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "docs httpx timeout=10.0",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs httpx timeout=10.0",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs httpx timeout=10.0",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs aiohttp total=60",
+  "test": "S4 trickle 0.25 s: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "docs aiohttp total=60",
+  "test": "S3 withheld response: returns by the deadline",
+  "verdict": "FAIL",
+  "detail": "did not return within the test limit (deadline 10.0 s)"
+ },
+ {
+  "program": "docs aiohttp total=60",
+  "test": "S6a Retry-After 2 s: no earlier retry",
+  "verdict": "pass",
+  "detail": ""
+ },
+ {
+  "program": "docs aiohttp total=60",
+  "test": "S9 refused: at most 3 attempts in the first 0.5 s",
+  "verdict": "pass",
+  "detail": ""
+ }
+]

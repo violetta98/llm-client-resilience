@@ -1,0 +1,11 @@
+Write a Java method in a public class ExchangeRateClient:
+  public static Map<String, Object> getExchangeRate(String baseUrl, String baseCurrency, String quoteCurrency) throws RateException
+It fetches the current exchange rate for the currency pair from the rates service and returns the
+rate object from the response. Throw a RateException if the rate cannot be fetched.
+API: GET {baseUrl}/v1/rates/{baseCurrency}/{quoteCurrency}
+  200: JSON {base, quote, rate, as_of}. 404: unknown currency pair.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

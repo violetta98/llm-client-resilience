@@ -1,0 +1,14 @@
+Write a Go function:
+  func CancelSubscription(baseURL, subscriptionID string) error
+It cancels the subscription. Return an error if the subscription cannot be canceled.
+API: DELETE {baseURL}/v1/subscriptions/{subscriptionID}
+  200: canceled, JSON {id, status}. 404: subscription not found or already canceled.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

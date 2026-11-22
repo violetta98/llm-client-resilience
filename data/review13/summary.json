@@ -1,0 +1,36 @@
+{
+ "spec": {
+  "S1_assertion_C0": "403/1271 (31.7 %)",
+  "S3_assertion_C0": "454/1271 (35.7 %)",
+  "S9_excessive_noB2_C0": "60/1110 (5.4 %)",
+  "S9_more_than_3_in_500ms_C0": "73/1191 (6.1 %)",
+  "S7_growth_noB2_C0": "75/81",
+  "S7_growth_noB2_C2": "277/295"
+ },
+ "ablation_over10_R6W5": {
+  "C0": {
+   "n": 155,
+   "returned_only": 101,
+   "with_no_return": 131,
+   "pct_with_no_return": 84.5
+  },
+  "C0b": {
+   "n": 164,
+   "returned_only": 85,
+   "with_no_return": 146,
+   "pct_with_no_return": 89.0
+  },
+  "C2": {
+   "n": 147,
+   "returned_only": 8,
+   "with_no_return": 53,
+   "pct_with_no_return": 36.1
+  },
+  "C2c": {
+   "n": 158,
+   "returned_only": 14,
+   "with_no_return": 62,
+   "pct_with_no_return": 39.2
+  }
+ }
+}

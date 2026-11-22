@@ -1,0 +1,10 @@
+Write a Python function:
+  def get_user_profile(base_url: str, user_id: str) -> dict
+It fetches the profile of the user with the given ID from the user service and returns the profile
+object from the response. Raise ProfileError if the profile cannot be fetched.
+API: GET {base_url}/v1/users/{user_id}
+  200: the profile, JSON {id, name, email, created_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Respond with the complete code in a single code block.

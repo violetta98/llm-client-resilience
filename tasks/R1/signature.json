@@ -1,0 +1,74 @@
+{
+ "task": "R1",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "u-000"
+ ],
+ "single_args": [
+  "{A}",
+  "u-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "u-100"
+  ],
+  [
+   "{A}",
+   "u-101"
+  ],
+  [
+   "{A}",
+   "u-102"
+  ],
+  [
+   "{A}",
+   "u-103"
+  ],
+  [
+   "{A}",
+   "u-104"
+  ],
+  [
+   "{A}",
+   "u-105"
+  ],
+  [
+   "{A}",
+   "u-106"
+  ],
+  [
+   "{A}",
+   "u-107"
+  ],
+  [
+   "{A}",
+   "u-108"
+  ],
+  [
+   "{A}",
+   "u-109"
+  ]
+ ],
+ "python": {
+  "function": "get_user_profile",
+  "signature": "def get_user_profile(base_url: str, user_id: str) -> dict"
+ },
+ "typescript": {
+  "function": "getUserProfile",
+  "signature": "export async function getUserProfile(baseUrl: string, userId: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getUserProfile",
+  "signature": "public static Map<String, Object> getUserProfile(String baseUrl, String userId) throws ProfileException",
+  "class": "UserProfileClient"
+ },
+ "go": {
+  "function": "GetUserProfile",
+  "signature": "func GetUserProfile(baseURL, userID string) (map[string]any, error)"
+ }
+}

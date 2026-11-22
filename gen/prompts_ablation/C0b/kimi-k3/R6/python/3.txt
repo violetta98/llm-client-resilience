@@ -1,0 +1,9 @@
+Write a Python function:
+  def get_stock_levels(base_url: str, product_id: str) -> dict
+It fetches the stock levels of the product in every warehouse from the inventory service and returns
+the stock object from the response. Raise StockError if the stock levels cannot be fetched.
+API: GET {base_url}/v1/products/{product_id}/stock
+  200: JSON {product_id, warehouses: [{warehouse_id, available, reserved}], updated_at}. 404:
+  product not found.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Respond with the complete code in a single code block.

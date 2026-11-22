@@ -1,0 +1,10 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function searchProducts(baseUrl: string, query: string, category: string, maxPrice: number): Promise<Array<Record<string, unknown>>>
+It searches the product catalog and returns the list of matching products (the "items" array of the
+response). Throw a SearchError if the search cannot be performed.
+API: GET {baseUrl}/v1/products?q={query}&category={category}&max_price={maxPrice}
+  200: JSON {items: [{id, name, category, price}], total}. 400: invalid parameters.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Respond with the complete code in a single code block.

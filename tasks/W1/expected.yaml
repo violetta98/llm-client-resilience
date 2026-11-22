@@ -1,0 +1,123 @@
+task: W1
+title: Create a payment; the API accepts Idempotency-Key
+group: write
+status: frozen with protocol v1 (E6)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: payment provider
+    port: 9001
+fault_dependency: A
+faulted_request: POST /v1/payments
+logical_call_key: order_id (body)
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: true
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S8
+- S9
+correct_result:
+  value: the payment object for ord-042 (status succeeded)
+degraded_result: null
+effects_constraint: at most one payment_created per order_id; all attempts of one order carry the same Idempotency-Key (or
+  there is a single attempt)
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S8:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: At most one payment; every retry reuses the same Idempotency-Key.
+args:
+  warmup:
+  - '{A}'
+  - ord-000
+  - '10.00'
+  - EUR
+  single:
+  - '{A}'
+  - ord-042
+  - '49.90'
+  - EUR
+  s7:
+  - - '{A}'
+    - ord-100
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-101
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-102
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-103
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-104
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-105
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-106
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-107
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-108
+    - '49.90'
+    - EUR
+  - - '{A}'
+    - ord-109
+    - '49.90'
+    - EUR

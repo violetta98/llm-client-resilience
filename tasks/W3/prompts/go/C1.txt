@@ -1,0 +1,12 @@
+Write a Go function:
+  func UploadDocument(baseURL, docID, content string) (map[string]any, error)
+It uploads the text content as the document docID (UTF-8) and returns the document metadata from the
+response. Return an error if the document cannot be uploaded.
+API: PUT {baseURL}/v1/documents/{docID}, body: the content (Content-Type: text/plain; charset=utf-8)
+  200: stored, JSON {id, size, sha256, version}; uploading to the same path replaces the document.
+  400: empty body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

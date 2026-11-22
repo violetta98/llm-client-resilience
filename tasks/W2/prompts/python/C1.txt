@@ -1,0 +1,12 @@
+Write a Python function:
+  def send_sms(base_url: str, to: str, body: str) -> str
+It sends an SMS through the SMS gateway and returns the message ID from the response. Raise SmsError
+if the message cannot be sent.
+API: POST {base_url}/v1/messages, JSON body {to, body}
+  202: accepted for delivery, JSON {id, status}. 400: invalid phone number or body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint does not support idempotency keys.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

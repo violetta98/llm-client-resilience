@@ -1,0 +1,94 @@
+task: R4
+title: List all orders across pages
+group: read
+status: frozen with protocol v1 (E6)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: order service
+    port: 9001
+fault_dependency: A
+faulted_request: the request for the second page (cursor of page 2)
+logical_call_key: customer_id + cursor (one page)
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: the 120 orders in order
+degraded_result: null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: All orders, or an error; never a partial list returned as complete.
+args:
+  warmup:
+  - '{A}'
+  - c-000
+  single:
+  - '{A}'
+  - c-042
+  s7:
+  - - '{A}'
+    - c-100
+  - - '{A}'
+    - c-101
+  - - '{A}'
+    - c-102
+  - - '{A}'
+    - c-103
+  - - '{A}'
+    - c-104
+  - - '{A}'
+    - c-105
+  - - '{A}'
+    - c-106
+  - - '{A}'
+    - c-107
+  - - '{A}'
+    - c-108
+  - - '{A}'
+    - c-109

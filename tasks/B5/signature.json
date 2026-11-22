@@ -1,0 +1,86 @@
+{
+ "task": "B5",
+ "deps": [
+  "A"
+ ],
+ "status": "confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)",
+ "warmup_args": [
+  "{A}",
+  "car-000",
+  "2026-03-01T00:00:00Z"
+ ],
+ "single_args": [
+  "{A}",
+  "car-042",
+  "2026-03-01T00:00:00Z"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "car-100",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-101",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-102",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-103",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-104",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-105",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-106",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-107",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-108",
+   "2026-03-01T00:00:00Z"
+  ],
+  [
+   "{A}",
+   "car-109",
+   "2026-03-01T00:00:00Z"
+  ]
+ ],
+ "python": {
+  "function": "fetch_shipment_updates",
+  "signature": "def fetch_shipment_updates(base_url: str, carrier_id: str, since: str) -> list[dict]"
+ },
+ "typescript": {
+  "function": "fetchShipmentUpdates",
+  "signature": "export async function fetchShipmentUpdates(baseUrl: string, carrierId: string, since: string): Promise<Array<Record<string, unknown>>>"
+ },
+ "java": {
+  "function": "fetchShipmentUpdates",
+  "signature": "public static List<Map<String, Object>> fetchShipmentUpdates(String baseUrl, String carrierId, String since) throws ShipmentUpdatesException",
+  "class": "ShipmentUpdatesClient"
+ },
+ "go": {
+  "function": "FetchShipmentUpdates",
+  "signature": "func FetchShipmentUpdates(baseURL, carrierID, since string) ([]map[string]any, error)"
+ }
+}

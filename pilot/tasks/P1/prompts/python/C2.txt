@@ -1,0 +1,15 @@
+Write a Python function:
+  def get_exchange_rate(base_url: str, base_currency: str, quote_currency: str) -> dict
+It fetches the current exchange rate for the currency pair from the rates service and returns the
+rate object from the response. Raise RateError if the rate cannot be fetched.
+API: GET {base_url}/v1/rates/{base_currency}/{quote_currency}
+  200: JSON {base, quote, rate, as_of}. 404: unknown currency pair.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- Writes are not repeated without an idempotency key.
+Respond with the complete code in a single code block.

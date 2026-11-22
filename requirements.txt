@@ -1,0 +1,3 @@
+# Analysis and figures. Harness and runtimes are pinned in runner/images/ and mock/go.mod.
+pyyaml>=6.0
+matplotlib>=3.8

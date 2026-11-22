@@ -1,0 +1,98 @@
+{
+ "task": "W1",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "ord-000",
+  "10.00",
+  "EUR"
+ ],
+ "single_args": [
+  "{A}",
+  "ord-042",
+  "49.90",
+  "EUR"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "ord-100",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-101",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-102",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-103",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-104",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-105",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-106",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-107",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-108",
+   "49.90",
+   "EUR"
+  ],
+  [
+   "{A}",
+   "ord-109",
+   "49.90",
+   "EUR"
+  ]
+ ],
+ "python": {
+  "function": "create_payment",
+  "signature": "def create_payment(base_url: str, order_id: str, amount: str, currency: str) -> dict"
+ },
+ "typescript": {
+  "function": "createPayment",
+  "signature": "export async function createPayment(baseUrl: string, orderId: string, amount: string, currency: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "createPayment",
+  "signature": "public static Map<String, Object> createPayment(String baseUrl, String orderId, String amount, String currency) throws PaymentException",
+  "class": "PaymentClient"
+ },
+ "go": {
+  "function": "CreatePayment",
+  "signature": "func CreatePayment(baseURL, orderID, amount, currency string) (map[string]any, error)"
+ }
+}

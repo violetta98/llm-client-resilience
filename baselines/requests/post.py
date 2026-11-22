@@ -1,0 +1,7 @@
+# Baseline: requests, all defaults (POST).
+import requests
+
+def send_sms(base_url: str, to: str, body: str) -> str:
+    r = requests.post(f"{base_url}/v1/messages", json={"to": to, "body": body})
+    r.raise_for_status()
+    return r.json()["id"]

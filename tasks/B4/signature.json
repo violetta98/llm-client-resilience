@@ -1,0 +1,182 @@
+{
+ "task": "B4",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}/hooks/acme",
+  {
+   "id": "evt_000",
+   "type": "invoice.paid",
+   "created_at": "2026-03-01T12:00:00Z",
+   "data": {
+    "invoice_id": "inv_000",
+    "amount": "120.00",
+    "currency": "EUR"
+   }
+  }
+ ],
+ "single_args": [
+  "{A}/hooks/acme",
+  {
+   "id": "evt_042",
+   "type": "invoice.paid",
+   "created_at": "2026-03-01T12:00:00Z",
+   "data": {
+    "invoice_id": "inv_042",
+    "amount": "120.00",
+    "currency": "EUR"
+   }
+  }
+ ],
+ "s7_args": [
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_100",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_100",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_101",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_101",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_102",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_102",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_103",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_103",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_104",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_104",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_105",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_105",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_106",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_106",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_107",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_107",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_108",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_108",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ],
+  [
+   "{A}/hooks/acme",
+   {
+    "id": "evt_109",
+    "type": "invoice.paid",
+    "created_at": "2026-03-01T12:00:00Z",
+    "data": {
+     "invoice_id": "inv_109",
+     "amount": "120.00",
+     "currency": "EUR"
+    }
+   }
+  ]
+ ],
+ "python": {
+  "function": "deliver_webhook",
+  "signature": "def deliver_webhook(endpoint_url: str, event: dict) -> None"
+ },
+ "typescript": {
+  "function": "deliverWebhook",
+  "signature": "export async function deliverWebhook(endpointUrl: string, event: Record<string, unknown>): Promise<void>"
+ },
+ "java": {
+  "function": "deliverWebhook",
+  "signature": "public static void deliverWebhook(String endpointUrl, Map<String, Object> event) throws DeliveryException",
+  "class": "WebhookDeliverer"
+ },
+ "go": {
+  "function": "DeliverWebhook",
+  "signature": "func DeliverWebhook(endpointURL string, event map[string]any) error"
+ }
+}

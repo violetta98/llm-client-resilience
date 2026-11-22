@@ -1,0 +1,29 @@
+scenario,lang,class,n
+S1,go,OS-bounded,1
+S1,go,library-bounded,5
+S1,go,not bounded,1
+S1,python,OS-bounded,6
+S1,python,library-bounded,9
+S1,python,not bounded,1
+S1,typescript,OS-bounded,1
+S1,typescript,library-bounded,1
+S1,typescript,not bounded,1
+S2,go,not bounded,1
+S2,python,library-bounded,11
+S2,python,not bounded,5
+S2,typescript,library-bounded,2
+S2,typescript,not bounded,1
+S3,go,library-bounded,2
+S3,go,not bounded,7
+S3,python,library-bounded,12
+S3,python,not bounded,5
+S3,typescript,library-bounded,20
+S3,typescript,not bounded,32
+S4,go,not repeated,8
+S4,java,not bounded,21
+S4,java,not repeated,243
+S4,python,library-bounded,1
+S4,python,not bounded,30
+S4,python,not repeated,392
+S4,typescript,not bounded,4
+S4,typescript,not repeated,65

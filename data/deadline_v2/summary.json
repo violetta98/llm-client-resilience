@@ -1,0 +1,60 @@
+{
+ "main": {
+  "changed_v1_to_v2": 153,
+  "changes_by_note": {
+   "+await": 9,
+   "+thread.join": 28,
+   "+queue.get": 7,
+   "-timer cleared before body": 23,
+   "+event.wait": 16,
+   "-timers/promises": 6,
+   "-ky without shortcut": 24,
+   "+queue.get;+event.wait": 28,
+   "+queue.get;+thread.join;+event.wait": 4,
+   "-future in with-block": 5,
+   "+thread.join;+event.wait": 2,
+   "+queue.get;+thread.join": 1
+  },
+  "s4_split_v1": {
+   "with_deadline": "34/1530 (2.2 %)",
+   "without": "730/1001 (72.9 %)"
+  },
+  "s4_split_v2": {
+   "with_deadline": "9/1567 (0.6 %)",
+   "without": "755/964 (78.3 %)"
+  },
+  "author_labels_v1": {
+   "n": 100,
+   "agree": 94.0,
+   "kappa": 0.876
+  },
+  "author_labels_v2": {
+   "n": 100,
+   "agree": 99.0,
+   "kappa": 0.979
+  }
+ },
+ "confirm": {
+  "changed_v1_to_v2": 42,
+  "changes_by_note": {
+   "+thread.join": 8,
+   "-timer cleared before body": 6,
+   "+queue.get": 6,
+   "-ky without shortcut": 3,
+   "+queue.get;+event.wait": 7,
+   "+event.wait": 6,
+   "-future in with-block": 1,
+   "-timers/promises": 3,
+   "+queue.get;+thread.join;+event.wait": 1,
+   "-timers/promises;-ky without shortcut": 1
+  },
+  "s4_split_v1": {
+   "with_deadline": "6/355 (1.7 %)",
+   "without": "200/266 (75.2 %)"
+  },
+  "s4_split_v2": {
+   "with_deadline": "0/369 (0.0 %)",
+   "without": "206/252 (81.7 %)"
+  }
+ }
+}

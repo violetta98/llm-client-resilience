@@ -1,0 +1,12 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function bestPrice(supplierUrls: string[], sku: string): Promise<Record<string, unknown>>
+It asks every supplier for a quote, in parallel, and returns the quote with the lowest price. It
+runs inside a web request handler and must return within 3 s. Suppliers that fail or do not answer
+in time are ignored. Throw a NoQuoteError if no supplier returns a quote.
+API (each supplier): GET {supplier_url}/v1/quotes?sku={sku}
+  200: JSON {supplier, sku, price, currency}. 404: unknown SKU.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

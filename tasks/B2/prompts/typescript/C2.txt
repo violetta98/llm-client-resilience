@@ -1,0 +1,17 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function waitForExport(baseUrl: string, exportId: string): Promise<string>
+The export job was already started. The function waits until the export completes and returns its
+result_url. It runs as a batch job with a time limit of 30 s: it must return or throw within 30 s.
+Throw a ExportError if the export fails or does not complete in time.
+API: GET {baseUrl}/v1/exports/{exportId}
+  200: JSON {id, status, result_url}; status is "running", "completed" or "failed"; result_url is
+  set when completed. 404: export not found. Exports usually complete within 5 s.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

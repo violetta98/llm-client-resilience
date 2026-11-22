@@ -1,0 +1,128 @@
+[
+ {
+  "task": "R6",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "references/R6/python/solution.py"
+ },
+ {
+  "task": "R6",
+  "lang": "python",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R6/python/NO_TIMEOUT/solution.py"
+ },
+ {
+  "task": "R6",
+  "lang": "python",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R6/python/TIGHT_LOOP/solution.py"
+ },
+ {
+  "task": "R6",
+  "lang": "python",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R6/python/IGNORE_RETRY_AFTER/solution.py"
+ },
+ {
+  "task": "R6",
+  "lang": "python",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R6/python/FIXED_BACKOFF/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "references/W5/python/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W5/python/NO_TIMEOUT/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W5/python/TIGHT_LOOP/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W5/python/IGNORE_RETRY_AFTER/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W5/python/UNSAFE_POST_RETRY/solution.py"
+ },
+ {
+  "task": "W5",
+  "lang": "python",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W5/python/FIXED_BACKOFF/solution.py"
+ },
+ {
+  "task": "B5",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "references/B5/python/solution.py"
+ },
+ {
+  "task": "B5",
+  "lang": "python",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B5/python/NO_TIMEOUT/solution.py"
+ },
+ {
+  "task": "B5",
+  "lang": "python",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B5/python/TIGHT_LOOP/solution.py"
+ },
+ {
+  "task": "B5",
+  "lang": "python",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B5/python/IGNORE_RETRY_AFTER/solution.py"
+ },
+ {
+  "task": "B5",
+  "lang": "python",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B5/python/FIXED_BACKOFF/solution.py"
+ },
+ {
+  "task": "H4",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "references/H4/python/solution.py"
+ },
+ {
+  "task": "H4",
+  "lang": "python",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H4/python/NO_TIMEOUT/solution.py"
+ },
+ {
+  "task": "H4",
+  "lang": "python",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H4/python/TIGHT_LOOP/solution.py"
+ },
+ {
+  "task": "H4",
+  "lang": "python",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H4/python/IGNORE_RETRY_AFTER/solution.py"
+ },
+ {
+  "task": "H4",
+  "lang": "python",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H4/python/FIXED_BACKOFF/solution.py"
+ }
+]

@@ -1,0 +1,18 @@
+Write a Python function:
+  def create_ticket(base_url: str, customer_id: str, subject: str, message: str) -> dict
+It opens a support ticket for the customer in the helpdesk and returns the ticket object from the
+response. Raise TicketError if the ticket cannot be created.
+API: POST {base_url}/v1/tickets, JSON body {customer_id, subject, message}
+  201: ticket created, JSON {id, customer_id, subject, status, created_at}. 400: invalid request.
+  422: the Idempotency-Key was already used with a different body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint accepts an Idempotency-Key header; requests with the same key within 24 h create at
+  most one ticket.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

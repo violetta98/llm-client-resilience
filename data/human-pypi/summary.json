@@ -1,0 +1,145 @@
+{
+ "functions": {
+  "units": 901,
+  "packages": 54,
+  "share": {
+   "whole": 1.6,
+   "perread": 34.7,
+   "none": 63.7
+  },
+  "ci": {
+   "whole": [
+    0.4,
+    8.1
+   ],
+   "perread": [
+    14.8,
+    40.7
+   ],
+   "none": [
+    58.3,
+    82.2
+   ]
+  },
+  "packages_with": {
+   "whole": 6,
+   "perread": 22,
+   "none": 44
+  }
+ },
+ "modules": {
+  "units": 324,
+  "packages": 54,
+  "share": {
+   "whole": 7.7,
+   "perread": 36.7,
+   "none": 55.6
+  },
+  "ci": {
+   "whole": [
+    3.5,
+    18.9
+   ],
+   "perread": [
+    21.4,
+    41.2
+   ],
+   "none": [
+    49.3,
+    70.2
+   ]
+  },
+  "packages_with": {
+   "whole": 8,
+   "perread": 24,
+   "none": 38
+  }
+ },
+ "functions_timeout_arg": 34.4,
+ "functions_without_litellm": {
+  "units": 326,
+  "packages": 53,
+  "share": {
+   "whole": 3.7,
+   "perread": 20.6,
+   "none": 75.8
+  },
+  "ci": {
+   "whole": [
+    0.5,
+    9.7
+   ],
+   "perread": [
+    12.0,
+    31.5
+   ],
+   "none": [
+    63.0,
+    85.4
+   ]
+  },
+  "packages_with": {
+   "whole": 5,
+   "perread": 21,
+   "none": 43
+  }
+ },
+ "functions_package_weighted": {
+  "whole": 4.8,
+  "perread": 25.3,
+  "none": 69.9
+ },
+ "llm_python": {
+  "both": {
+   "n": 749,
+   "whole": 16.6,
+   "perread": 82.8,
+   "none": 0.7
+  },
+  "C0": {
+   "n": 379,
+   "whole": 16.9,
+   "perread": 82.3,
+   "none": 0.8
+  },
+  "C2": {
+   "n": 370,
+   "whole": 16.2,
+   "perread": 83.2,
+   "none": 0.5
+  }
+ },
+ "functions_by_library": {
+  "requests": {
+   "none": 115,
+   "perread": 90,
+   "whole": 1
+  },
+  "aiohttp": {
+   "perread": 9,
+   "none": 37,
+   "whole": 9
+  },
+  "other": {
+   "none": 32,
+   "whole": 5,
+   "perread": 15
+  },
+  "urllib.request": {
+   "none": 4,
+   "perread": 1
+  },
+  "httpx": {
+   "perread": 208,
+   "none": 392
+  },
+  "urllib3": {
+   "perread": 6,
+   "none": 21
+  },
+  "http.client": {
+   "perread": 1,
+   "none": 9
+  }
+ }
+}

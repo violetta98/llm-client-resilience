@@ -1,0 +1,22 @@
+{
+  "_doc": "Named thresholds of draft Table V. Frozen with the protocol (E6). sync_threshold is calibrated on references and FIXED_BACKOFF mutants before the freeze (E3).",
+  "limit_s": 90,
+  "limit_long_s": 330,
+  "overrun_margin_s": 0.25,
+  "c2_limit_s": 10.25,
+  "rapid_gap_s": 0.1,
+  "rapid_min_attempts": 3,
+  "retry_after_tol_seconds_s": 0.1,
+  "retry_after_tol_date_s": 1.0,
+  "excessive_attempts": 10,
+  "excessive_window_s": 30,
+  "late_window_s": 5,
+  "sync_window_s": 0.05,
+  "sync_min_invocations": 5,
+  "sync_from_attempt": 2,
+  "sync_threshold": 0.8,
+  "outage_s": 30,
+  "clock_flag_s": 1.0,
+  "late_syn_tolerance_s": 0.005,
+  "_doc_late_syn_tolerance_s": "Connection attempts seen only in the packet capture (S1, S2, S9) are timestamped with CLOCK_REALTIME and converted to CLOCK_MONOTONIC; the conversion error is below 0.5 ms (E3). Such an attempt counts as late only if it is more than this tolerance after the return."
+}

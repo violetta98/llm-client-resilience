@@ -1,0 +1,10 @@
+Write a Go function:
+  func GetExchangeRate(baseURL, baseCurrency, quoteCurrency string) (map[string]any, error)
+It fetches the current exchange rate for the currency pair from the rates service and returns the
+rate object from the response. Return an error if the rate cannot be fetched.
+API: GET {baseURL}/v1/rates/{baseCurrency}/{quoteCurrency}
+  200: JSON {base, quote, rate, as_of}. 404: unknown currency pair.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

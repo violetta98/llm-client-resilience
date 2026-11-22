@@ -1,0 +1,106 @@
+task: B5
+title: Fetch the shipment status updates of a carrier for a nightly sync
+group: background
+status: confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)
+time_limit_s: 30
+overrun_threshold_s: 30.25
+dependencies:
+  A:
+    name: carrier API
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/carriers/{carrier_id}/shipment-updates (every request; a request with another since is another logical
+  call)
+logical_call_key: carrier_id + since
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: the 25 updates of car-042 in order
+degraded_result: null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: All updates, or an error, within 30 s (in S7, an error); never a partial list returned as complete.
+args:
+  warmup:
+  - '{A}'
+  - car-000
+  - '2026-03-01T00:00:00Z'
+  single:
+  - '{A}'
+  - car-042
+  - '2026-03-01T00:00:00Z'
+  s7:
+  - - '{A}'
+    - car-100
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-101
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-102
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-103
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-104
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-105
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-106
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-107
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-108
+    - '2026-03-01T00:00:00Z'
+  - - '{A}'
+    - car-109
+    - '2026-03-01T00:00:00Z'

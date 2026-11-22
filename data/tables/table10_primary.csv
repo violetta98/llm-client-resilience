@@ -1,0 +1,31 @@
+outcome,model,C0_events,C0_n,C2_events,C2_n,estimate,lo,hi,scale,test,p,p_holm
+s3_no_return,claude-opus-5.5,0,173,0,191,0,0,0,difference in proportions,bootstrap (separation),1,1
+s3_no_return,gpt-6.1-sol,0,190,0,190,0,0,0,difference in proportions,bootstrap (separation),1,1
+s3_no_return,gemini-4-argon,1,186,0,182,-0.00537634408602151,-0.0184077482390366,0,difference in proportions,bootstrap (separation),0.743,1
+s3_no_return,claude-haiku-5.5,2,170,0,174,-0.0117647058823529,-0.0308641975308642,0,difference in proportions,bootstrap (separation),0.254,1
+s3_no_return,deepseek-v4.1-flash,1,183,0,188,-0.00546448087431694,-0.0177541208791209,0,difference in proportions,bootstrap (separation),0.722,1
+s3_no_return,kimi-k3,1,184,0,179,-0.00543478260869565,-0.0181818181818182,0,difference in proportions,bootstrap (separation),0.731,1
+s3_no_return,qwen3-coder-next,13,94,10,79,0.696601380503762,0.241151420379113,2.01223564247261,OR,LR,0.50374967958897,1
+s3_no_return,granite-4.2-8b,30,91,20,77,0.63284532430725,0.278639691913753,1.43731570239287,OR,Wald,0.27430694715798,1
+s3_no_return,"flagship vs others, C0",,,,,-0.0963343195798836,-0.122021433706889,-0.0739404696126859,difference in proportions,bootstrap (separation),0,0
+s3_no_return,"flagship vs others, C2",,,,,-0.0772645076442545,-0.102555769230769,-0.0533903174837083,difference in proportions,bootstrap (separation),0,0
+overrun,claude-opus-5.5,6,79,1,84,0.0885893918610419,0.0087500655139774,0.896916753111467,OR,LR,0.0159231556866144,0.111462089806301
+overrun,gpt-6.1-sol,0,83,0,84,0,0,0,difference in proportions,bootstrap (separation),1,1
+overrun,gemini-4-argon,18,78,17,81,0.589762618806888,0.19974320057363,1.74133560262916,OR,LR,0.33783133765602,1
+overrun,claude-haiku-5.5,18,78,7,78,0.124203774544271,0.0345318168664321,0.44673518542953,OR,LR,0.000809379262196185,0.00647503409756948
+overrun,deepseek-v4.1-flash,14,82,15,81,1.10214087054845,0.356974833575369,3.40280149826534,OR,LR,0.865722304729855,1
+overrun,kimi-k3,18,82,21,76,1.93837064396056,0.675967795489905,5.55837242311965,OR,LR,0.216880591570089,1
+overrun,qwen3-coder-next,24,41,23,35,1.76874697338787,0.537669135120507,5.81857066273215,OR,LR,0.346639348598012,1
+overrun,granite-4.2-8b,17,43,21,35,2.98031638808895,0.917527470069849,9.68067557959369,OR,LR,0.0659945395455345,0.395967237273207
+overrun,"flagship vs others, C0",,,,,-0.218106032195939,-0.283210109638213,-0.152730899822642,difference in proportions,bootstrap (separation),0,0
+overrun,"flagship vs others, C2",,,,,-0.287750382604184,-0.350987032003676,-0.227934671148126,difference in proportions,bootstrap (separation),0,0
+unsafe_write,claude-opus-5.5,0,35,0,36,0,0,0,difference in proportions,bootstrap (separation),1,1
+unsafe_write,gpt-6.1-sol,0,35,0,34,0,0,0,difference in proportions,bootstrap (separation),1,1
+unsafe_write,gemini-4-argon,0,35,0,33,0,0,0,difference in proportions,bootstrap (separation),1,1
+unsafe_write,claude-haiku-5.5,0,30,0,31,0,0,0,difference in proportions,bootstrap (separation),1,1
+unsafe_write,deepseek-v4.1-flash,0,35,0,35,0,0,0,difference in proportions,bootstrap (separation),1,1
+unsafe_write,kimi-k3,2,34,0,33,-0.0588235294117647,-0.151515151515152,0,difference in proportions,bootstrap (separation),0.273,1
+unsafe_write,qwen3-coder-next,2,18,3,17,0.065359477124183,-0.181818181818182,0.317960526315789,difference in proportions,bootstrap (no model),0.615,1
+unsafe_write,granite-4.2-8b,2,14,5,14,0.214285714285714,-0.1,0.555555555555556,difference in proportions,bootstrap (no model),0.175,1
+unsafe_write,"flagship vs others, C0",,,,,-0.0625583566760037,-0.115411647176353,-0.0176428571428572,difference in proportions,bootstrap (separation),0.006,0.006
+unsafe_write,"flagship vs others, C2",,,,,-0.10672268907563,-0.170318322981366,-0.0469583048530417,difference in proportions,bootstrap (separation),0,0

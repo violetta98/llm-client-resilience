@@ -1,0 +1,95 @@
+task: R5
+title: Read a feature flag; return the documented default if the service fails
+group: read
+status: frozen with protocol v1 (E6)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: feature-flag service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/flags/{key} (the only request)
+logical_call_key: flag_key
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: true
+degraded_result:
+  value: false
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - correct
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: The documented default value (false); recovering the real value (true) is also correct.
+args:
+  warmup:
+  - '{A}'
+  - flag-warmup
+  single:
+  - '{A}'
+  - new-checkout
+  s7:
+  - - '{A}'
+    - flag-00
+  - - '{A}'
+    - flag-01
+  - - '{A}'
+    - flag-02
+  - - '{A}'
+    - flag-03
+  - - '{A}'
+    - flag-04
+  - - '{A}'
+    - flag-05
+  - - '{A}'
+    - flag-06
+  - - '{A}'
+    - flag-07
+  - - '{A}'
+    - flag-08
+  - - '{A}'
+    - flag-09

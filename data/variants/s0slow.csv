@@ -1,0 +1,8 @@
+group,programs,correct_S0_pct,correct_S0slow_pct,correct_S0_not_S0slow
+main all,674,98.2,94.1,28
+main C0,352,97.7,94.0,13
+main C2,322,98.8,94.1,15
+revisions R0,419,97.4,97.1,1
+revisions R1,386,97.9,97.9,0
+revisions R0 passing S4 2 s,336,97.0,96.7,1
+revisions R1 passing S4 2 s,134,95.5,95.5,0

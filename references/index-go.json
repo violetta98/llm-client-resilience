@@ -1,0 +1,494 @@
+[
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R1/go/solution.go"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R1/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R1/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R1/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R1/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "R2",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R2/go/solution.go"
+ },
+ {
+  "task": "R2",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R2/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R2",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R2/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R2",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R2/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R2",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R2/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "R3",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R3/go/solution.go"
+ },
+ {
+  "task": "R3",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R3/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R3",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R3/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R3",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R3/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R3",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R3/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "R4",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R4/go/solution.go"
+ },
+ {
+  "task": "R4",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R4/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R4",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R4/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R4",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R4/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R4",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R4/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "R5",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R5/go/solution.go"
+ },
+ {
+  "task": "R5",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R5/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R5",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R5/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R5",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R5/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R5",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R5/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/W1/go/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W1/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W1/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W1/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W1/go/UNSAFE_POST_RETRY/solution.go"
+ },
+ {
+  "task": "W1",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W1/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/W2/go/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W2/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W2/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W2/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W2/go/UNSAFE_POST_RETRY/solution.go"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W2/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "W3",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/W3/go/solution.go"
+ },
+ {
+  "task": "W3",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W3/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "W3",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W3/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "W3",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W3/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "W3",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W3/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "W4",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/W4/go/solution.go"
+ },
+ {
+  "task": "W4",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W4/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "W4",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W4/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "W4",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W4/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "W4",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W4/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "B1",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/B1/go/solution.go"
+ },
+ {
+  "task": "B1",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B1/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "B1",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B1/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "B1",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B1/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "B1",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B1/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "B2",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/B2/go/solution.go"
+ },
+ {
+  "task": "B2",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B2/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "B2",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B2/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "B2",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B2/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "B2",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B2/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "B3",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/B3/go/solution.go"
+ },
+ {
+  "task": "B3",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B3/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "B3",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B3/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "B3",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B3/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "B3",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B3/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "B4",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/B4/go/solution.go"
+ },
+ {
+  "task": "B4",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B4/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "B4",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B4/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "B4",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B4/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "B4",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B4/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "H1",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/H1/go/solution.go"
+ },
+ {
+  "task": "H1",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H1/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "H1",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H1/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "H1",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H1/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "H1",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H1/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "H2",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/H2/go/solution.go"
+ },
+ {
+  "task": "H2",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H2/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "H2",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H2/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "H2",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H2/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "H2",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H2/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "H3",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/H3/go/solution.go"
+ },
+ {
+  "task": "H3",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H3/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "H3",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H3/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "H3",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H3/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "H3",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H3/go/FIXED_BACKOFF/solution.go"
+ }
+]

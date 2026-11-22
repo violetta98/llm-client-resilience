@@ -1,0 +1,153 @@
+{
+ "s7_growth": {
+  "C0": {
+   "flagged": 129,
+   "growing": 117
+  },
+  "C2": {
+   "flagged": 357,
+   "growing": 338
+  },
+  "C0_noB2": {
+   "flagged": 81,
+   "growing": 75
+  },
+  "C2_noB2": {
+   "flagged": 295,
+   "growing": 277
+  }
+ },
+ "ap10": {
+  "S5a_C0": {
+   "n": 1271,
+   "not_correct": 230,
+   "not_allowed": 14
+  },
+  "S5a_C2": {
+   "n": 1260,
+   "not_correct": 65,
+   "not_allowed": 14
+  },
+  "S5b_C0": {
+   "n": 1271,
+   "not_correct": 296,
+   "not_allowed": 14
+  },
+  "S5b_C2": {
+   "n": 1260,
+   "not_correct": 205,
+   "not_allowed": 15
+  }
+ },
+ "heldout_jdk26": {
+  "jdk25": {
+   "H1": {
+    "with": [
+     6,
+     355
+    ],
+    "without": [
+     200,
+     266
+    ]
+   },
+   "H2": {
+    "C0": [
+     81,
+     155
+    ],
+    "C2": [
+     52,
+     147
+    ]
+   }
+  },
+  "jdk26": {
+   "H1": {
+    "with": [
+     6,
+     355
+    ],
+    "without": [
+     131,
+     266
+    ]
+   },
+   "H2": {
+    "C0": [
+     50,
+     155
+    ],
+    "C2": [
+     38,
+     147
+    ]
+   }
+  }
+ },
+ "ablation": {
+  "P1": {
+   "c1": "1/318",
+   "c0": "79/303",
+   "rd_pp": -25.8,
+   "rd_lo": -41.6,
+   "rd_hi": -8.4,
+   "marginal_or_haldane": 0.013
+  },
+  "P2": {
+   "c1": "59/158",
+   "c0": "81/155",
+   "rd_pp": -14.9,
+   "rd_lo": -28.8,
+   "rd_hi": -0.6,
+   "marginal_or_haldane": 0.547
+  },
+  "P3": {
+   "c1": "141/326",
+   "c0": "287/318",
+   "rd_pp": -47.0,
+   "rd_lo": -61.6,
+   "rd_hi": -32.9,
+   "marginal_or_haldane": 0.084
+  }
+ },
+ "c2_rw_over10_jdk26": {
+  "jdk25": {
+   "n": 706,
+   "over_10s": 245,
+   "pct": 34.7
+  },
+  "jdk26": {
+   "n": 706,
+   "over_10s": 176,
+   "pct": 24.9
+  }
+ },
+ "ablation_jdk26": {
+  "C0": {
+   "n": 155,
+   "hang_jdk25": 81,
+   "hang_jdk26": 50
+  },
+  "C0b": {
+   "n": 164,
+   "hang_jdk25": 104,
+   "hang_jdk26": 78
+  },
+  "C2": {
+   "n": 147,
+   "hang_jdk25": 52,
+   "hang_jdk26": 38
+  },
+  "C2c": {
+   "n": 158,
+   "hang_jdk25": 59,
+   "hang_jdk26": 39
+  },
+  "P2_jdk26": {
+   "rd_pp": -7.6,
+   "lo": -16.6,
+   "hi": 4.0
+  }
+ }
+}

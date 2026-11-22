@@ -1,0 +1,11 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function getUserProfile(baseUrl: string, userId: string): Promise<Record<string, unknown>>
+It fetches the profile of the user with the given ID from the user service and returns the profile
+object from the response. Throw a ProfileError if the profile cannot be fetched.
+API: GET {baseUrl}/v1/users/{userId}
+  200: the profile, JSON {id, name, email, created_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

@@ -1,0 +1,18 @@
+Write a Java method in a public class BalanceClient:
+  public static Map<String, Object> getAccountBalance(String authUrl, String apiUrl, String clientId, String clientSecret, String accountId) throws BalanceException
+It obtains an access token with the client credentials and uses it to fetch the balance of the
+account; it returns the balance object from the response. It runs as a batch job with a time limit
+of 30 s: it must return or throw within 30 s. Throw a BalanceException if the balance cannot be
+fetched.
+API (authorization server): POST {authUrl}/oauth/token, form body grant_type=client_credentials&client_id=…&client_secret=…
+  200: JSON {access_token, token_type: "Bearer", expires_in}. 401: invalid client.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+API (accounts API): GET {apiUrl}/v1/accounts/{accountId}/balance, header Authorization: Bearer <access_token>
+  200: JSON {account_id, balance, currency}. 401: missing, invalid or expired token. 404: account
+  not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

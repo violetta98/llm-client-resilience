@@ -1,0 +1,4 @@
+construct,programs,hang_S4g05,overrun_BH_S4g05,hang_S4,overrun_BH_S4,hang_S4g5,overrun_BH_S4g5,hang_S4h,overrun_BH_S4h
+none,23,60.9,50.0,60.9,50.0,60.9,50.0,60.9,50.0
+per-read or until headers only,257,87.2,75.4,77.8,68.1,61.9,58.0,28.8,36.2
+whole-call deadline,394,3.8,3.0,3.3,2.0,3.3,2.0,3.3,2.0

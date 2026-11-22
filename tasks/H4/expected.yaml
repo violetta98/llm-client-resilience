@@ -1,0 +1,100 @@
+task: H4
+title: Show notification preferences; return the documented default if unavailable
+group: handler
+status: confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)
+time_limit_s: 2
+overrun_threshold_s: 2.25
+dependencies:
+  A:
+    name: preference service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/users/{user_id}/notification-preferences (the only request)
+logical_call_key: user_id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value:
+    email: false
+    sms: true
+    push: true
+degraded_result:
+  value:
+    email: true
+    sms: false
+    push: false
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: The documented default within 2 s; recovering the real preferences is also correct.
+args:
+  warmup:
+  - '{A}'
+  - u-000
+  single:
+  - '{A}'
+  - u-042
+  s7:
+  - - '{A}'
+    - u-100
+  - - '{A}'
+    - u-101
+  - - '{A}'
+    - u-102
+  - - '{A}'
+    - u-103
+  - - '{A}'
+    - u-104
+  - - '{A}'
+    - u-105
+  - - '{A}'
+    - u-106
+  - - '{A}'
+    - u-107
+  - - '{A}'
+    - u-108
+  - - '{A}'
+    - u-109

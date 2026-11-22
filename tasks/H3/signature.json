@@ -1,0 +1,124 @@
+{
+ "task": "H3",
+ "deps": [
+  "A",
+  "B",
+  "C"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  [
+   "{A}",
+   "{B}",
+   "{C}"
+  ],
+  "sku-000"
+ ],
+ "single_args": [
+  [
+   "{A}",
+   "{B}",
+   "{C}"
+  ],
+  "sku-042"
+ ],
+ "s7_args": [
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-100"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-101"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-102"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-103"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-104"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-105"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-106"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-107"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-108"
+  ],
+  [
+   [
+    "{A}",
+    "{B}",
+    "{C}"
+   ],
+   "sku-109"
+  ]
+ ],
+ "python": {
+  "function": "best_price",
+  "signature": "def best_price(supplier_urls: list[str], sku: str) -> dict"
+ },
+ "typescript": {
+  "function": "bestPrice",
+  "signature": "export async function bestPrice(supplierUrls: string[], sku: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "bestPrice",
+  "signature": "public static Map<String, Object> bestPrice(List<String> supplierUrls, String sku) throws NoQuoteException",
+  "class": "PriceComparison"
+ },
+ "go": {
+  "function": "BestPrice",
+  "signature": "func BestPrice(supplierURLs []string, sku string) (map[string]any, error)"
+ }
+}

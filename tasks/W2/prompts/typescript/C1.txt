@@ -1,0 +1,12 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function sendSms(baseUrl: string, to: string, body: string): Promise<string>
+It sends an SMS through the SMS gateway and returns the message ID from the response. Throw a
+SmsError if the message cannot be sent.
+API: POST {baseUrl}/v1/messages, JSON body {to, body}
+  202: accepted for delivery, JSON {id, status}. 400: invalid phone number or body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint does not support idempotency keys.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

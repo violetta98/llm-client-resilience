@@ -1,0 +1,128 @@
+[
+ {
+  "task": "R6",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/R6/typescript/solution.ts"
+ },
+ {
+  "task": "R6",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R6/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "R6",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R6/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "R6",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R6/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "R6",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R6/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/W5/typescript/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W5/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W5/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W5/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W5/typescript/UNSAFE_POST_RETRY/solution.ts"
+ },
+ {
+  "task": "W5",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W5/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "B5",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/B5/typescript/solution.ts"
+ },
+ {
+  "task": "B5",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B5/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "B5",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B5/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "B5",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B5/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "B5",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B5/typescript/FIXED_BACKOFF/solution.ts"
+ },
+ {
+  "task": "H4",
+  "lang": "typescript",
+  "variant": "REFERENCE",
+  "path": "references/H4/typescript/solution.ts"
+ },
+ {
+  "task": "H4",
+  "lang": "typescript",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H4/typescript/NO_TIMEOUT/solution.ts"
+ },
+ {
+  "task": "H4",
+  "lang": "typescript",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H4/typescript/TIGHT_LOOP/solution.ts"
+ },
+ {
+  "task": "H4",
+  "lang": "typescript",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H4/typescript/IGNORE_RETRY_AFTER/solution.ts"
+ },
+ {
+  "task": "H4",
+  "lang": "typescript",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H4/typescript/FIXED_BACKOFF/solution.ts"
+ }
+]

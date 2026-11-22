@@ -1,0 +1,9 @@
+Write a Java method in a public class StockClient:
+  public static Map<String, Object> getStockLevels(String baseUrl, String productId) throws StockException
+It fetches the stock levels of the product in every warehouse from the inventory service and returns
+the stock object from the response. Throw a StockException if the stock levels cannot be fetched.
+API: GET {baseUrl}/v1/products/{productId}/stock
+  200: JSON {product_id, warehouses: [{warehouse_id, available, reserved}], updated_at}. 404:
+  product not found.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+Respond with the complete code in a single code block.

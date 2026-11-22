@@ -1,0 +1,7 @@
+what,a,b
+H1 python,113/174 hang without deadline,0/12 hang with deadline
+H1 typescript,17/19 hang without deadline,6/152 hang with deadline
+H1 java,70/70 hang without deadline,0/56 hang with deadline
+H1 go,0/3 hang without deadline,0/135 hang with deadline
+H2 marginal OR (C2 vs C0),0.5,"{""00"": 74, ""01"": 81, ""10"": 95, ""11"": 52}"
+H3 marginal OR (C2 vs C0),4.52,"{""00"": 295, ""01"": 23, ""10"": 224, ""11"": 79}"

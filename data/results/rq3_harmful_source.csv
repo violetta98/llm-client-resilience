@@ -1,0 +1,65 @@
+model,flag,source,runs
+all,excessive_retries,generated code,926
+all,excessive_retries,unattributed,20
+all,rapid_retries,generated code,265
+all,rapid_retries,unattributed,4
+all,retry_after_violation,generated code,264
+all,retry_after_violation,unattributed,38
+all,sync_retries,generated code,489
+all,sync_retries,library default,12
+all,sync_retries,unattributed,19
+all,unsafe_write_retry,generated code,13
+claude-haiku-5.5,excessive_retries,generated code,18
+claude-haiku-5.5,rapid_retries,generated code,34
+claude-haiku-5.5,retry_after_violation,generated code,9
+claude-haiku-5.5,sync_retries,generated code,42
+claude-haiku-5.5,sync_retries,unattributed,1
+claude-opus-5.5,excessive_retries,generated code,88
+claude-opus-5.5,rapid_retries,generated code,52
+claude-opus-5.5,retry_after_violation,generated code,3
+claude-opus-5.5,sync_retries,generated code,39
+deepseek-v4.1-flash,excessive_retries,generated code,165
+deepseek-v4.1-flash,rapid_retries,generated code,42
+deepseek-v4.1-flash,retry_after_violation,generated code,11
+deepseek-v4.1-flash,sync_retries,generated code,119
+gemini-4-argon,excessive_retries,generated code,276
+gemini-4-argon,excessive_retries,unattributed,1
+gemini-4-argon,rapid_retries,generated code,45
+gemini-4-argon,rapid_retries,unattributed,1
+gemini-4-argon,retry_after_violation,generated code,14
+gemini-4-argon,retry_after_violation,unattributed,24
+gemini-4-argon,sync_retries,generated code,63
+gemini-4-argon,sync_retries,library default,10
+gemini-4-argon,sync_retries,unattributed,9
+gpt-6.1-sol,excessive_retries,generated code,231
+gpt-6.1-sol,excessive_retries,unattributed,16
+gpt-6.1-sol,rapid_retries,generated code,53
+gpt-6.1-sol,rapid_retries,unattributed,2
+gpt-6.1-sol,retry_after_violation,generated code,10
+gpt-6.1-sol,retry_after_violation,unattributed,1
+gpt-6.1-sol,sync_retries,generated code,51
+granite-4.2-8b,excessive_retries,generated code,12
+granite-4.2-8b,excessive_retries,unattributed,1
+granite-4.2-8b,rapid_retries,generated code,4
+granite-4.2-8b,retry_after_violation,generated code,113
+granite-4.2-8b,retry_after_violation,unattributed,3
+granite-4.2-8b,sync_retries,generated code,86
+granite-4.2-8b,sync_retries,unattributed,1
+granite-4.2-8b,unsafe_write_retry,generated code,7
+kimi-k3,excessive_retries,generated code,121
+kimi-k3,rapid_retries,generated code,33
+kimi-k3,rapid_retries,unattributed,1
+kimi-k3,retry_after_violation,generated code,29
+kimi-k3,retry_after_violation,unattributed,1
+kimi-k3,sync_retries,generated code,52
+kimi-k3,sync_retries,unattributed,3
+kimi-k3,unsafe_write_retry,generated code,2
+qwen3-coder-next,excessive_retries,generated code,15
+qwen3-coder-next,excessive_retries,unattributed,2
+qwen3-coder-next,rapid_retries,generated code,2
+qwen3-coder-next,retry_after_violation,generated code,75
+qwen3-coder-next,retry_after_violation,unattributed,9
+qwen3-coder-next,sync_retries,generated code,37
+qwen3-coder-next,sync_retries,library default,2
+qwen3-coder-next,sync_retries,unattributed,5
+qwen3-coder-next,unsafe_write_retry,generated code,4

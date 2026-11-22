@@ -1,0 +1,3 @@
+arm,revisions,pass_0_5s,pass_0_5s_pct,pass_2s,pass_2s_pct,pass_5s,pass_5s_pct,pass_headers,pass_headers_pct,pass_all4,pass_all4_pct
+R0,419,324,77.3,336,80.2,353,84.2,390,93.1,321,76.6
+R1,386,111,28.8,134,34.7,164,42.5,275,71.2,111,28.8

@@ -1,0 +1,11 @@
+Write a Go function:
+  func GetStockLevels(baseURL, productID string) (map[string]any, error)
+It fetches the stock levels of the product in every warehouse from the inventory service and returns
+the stock object from the response. Return an error if the stock levels cannot be fetched.
+API: GET {baseURL}/v1/products/{productID}/stock
+  200: JSON {product_id, warehouses: [{warehouse_id, available, reserved}], updated_at}. 404:
+  product not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

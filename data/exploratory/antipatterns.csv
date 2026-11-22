@@ -1,0 +1,10 @@
+id,paper_id,anti_pattern,exposed_by,solutions_all,share_all,harm_among_hits,solutions_C0,share_C0,solutions_C2,share_C2,by_lang,by_model_top3
+AP1,AP1,Attempt or read timeout without a deadline on the call,S4,926,36.6,73.7,499,39.3,427,33.9,python 620; typescript 2; java 303; go 1,kimi-k3 147; gemini-4-argon 142; deepseek-v4.1-flash 140
+AP2,AP1,No timeout at all,"S3, S4",75,3.0,76.0,47,3.7,28,2.2,python 5; typescript 59; java 0; go 11,granite-4.2-8b 49; qwen3-coder-next 11; gemini-4-argon 7
+AP3,AP3,Retry without delay against a refused connection,S9,274,10.8,,33,2.6,241,19.1,python 77; typescript 64; java 76; go 57,gpt-6.1-sol 55; claude-opus-5.5 52; gemini-4-argon 48
+AP4,AP4,Retry without an attempt limit or budget,"S7, S9",550,21.7,,146,11.5,404,32.1,python 174; typescript 121; java 111; go 144,gemini-4-argon 156; gpt-6.1-sol 138; deepseek-v4.1-flash 103
+AP5,AP5,Retry-After ignored or not parsed in date form,"S6a, S6b",250,9.9,,135,10.6,115,9.1,python 104; typescript 85; java 32; go 29,granite-4.2-8b 101; qwen3-coder-next 65; gemini-4-argon 28
+AP6,-,Backoff without jitter,S7,580,22.9,,357,28.1,223,17.7,python 209; typescript 156; java 24; go 191,deepseek-v4.1-flash 120; gemini-4-argon 109; granite-4.2-8b 87
+AP7,AP6,Retry of a non-idempotent write without a key,S8,14,0.6,,6,0.5,8,0.6,python 12; typescript 2; java 0; go 0,granite-4.2-8b 7; qwen3-coder-next 5; kimi-k3 2
+AP8,AP7,Requests continue after the function returned,any,339,13.4,,130,10.2,209,16.6,python 38; typescript 283; java 6; go 12,gpt-6.1-sol 74; claude-opus-5.5 62; kimi-k3 58
+AP9,AP8,Partial result reported as complete,S3-S8,10,0.4,,6,0.5,4,0.3,python 5; typescript 1; java 4; go 0,qwen3-coder-next 4; claude-haiku-5.5 2; claude-opus-5.5 1

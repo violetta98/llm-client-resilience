@@ -1,0 +1,16 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function addTicketComment(baseUrl: string, ticketId: string, text: string): Promise<string>
+It adds the comment text to the support ticket and returns the comment ID from the response. Throw a
+CommentError if the comment cannot be added.
+API: POST {baseUrl}/v1/tickets/{ticketId}/comments, JSON body {text}
+  201: comment added, JSON {id, ticket_id, created_at}. 400: empty text. 404: ticket not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint does not support idempotency keys.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- Writes are not repeated without an idempotency key.
+Respond with the complete code in a single code block.

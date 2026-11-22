@@ -1,0 +1,86 @@
+{
+ "task": "W2",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "+48500000000",
+  "warm-up"
+ ],
+ "single_args": [
+  "{A}",
+  "+48500100042",
+  "Your code is 421337"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "+48500100100",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100101",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100102",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100103",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100104",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100105",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100106",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100107",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100108",
+   "Your code is 421337"
+  ],
+  [
+   "{A}",
+   "+48500100109",
+   "Your code is 421337"
+  ]
+ ],
+ "python": {
+  "function": "send_sms",
+  "signature": "def send_sms(base_url: str, to: str, body: str) -> str"
+ },
+ "typescript": {
+  "function": "sendSms",
+  "signature": "export async function sendSms(baseUrl: string, to: string, body: string): Promise<string>"
+ },
+ "java": {
+  "function": "sendSms",
+  "signature": "public static String sendSms(String baseUrl, String to, String body) throws SmsException",
+  "class": "SmsClient"
+ },
+ "go": {
+  "function": "SendSms",
+  "signature": "func SendSms(baseURL, to, body string) (string, error)"
+ }
+}

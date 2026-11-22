@@ -1,0 +1,74 @@
+{
+ "task": "H4",
+ "deps": [
+  "A"
+ ],
+ "status": "confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)",
+ "warmup_args": [
+  "{A}",
+  "u-000"
+ ],
+ "single_args": [
+  "{A}",
+  "u-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "u-100"
+  ],
+  [
+   "{A}",
+   "u-101"
+  ],
+  [
+   "{A}",
+   "u-102"
+  ],
+  [
+   "{A}",
+   "u-103"
+  ],
+  [
+   "{A}",
+   "u-104"
+  ],
+  [
+   "{A}",
+   "u-105"
+  ],
+  [
+   "{A}",
+   "u-106"
+  ],
+  [
+   "{A}",
+   "u-107"
+  ],
+  [
+   "{A}",
+   "u-108"
+  ],
+  [
+   "{A}",
+   "u-109"
+  ]
+ ],
+ "python": {
+  "function": "get_notification_preferences",
+  "signature": "def get_notification_preferences(preferences_url: str, user_id: str) -> dict"
+ },
+ "typescript": {
+  "function": "getNotificationPreferences",
+  "signature": "export async function getNotificationPreferences(preferencesUrl: string, userId: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getNotificationPreferences",
+  "signature": "public static Map<String, Object> getNotificationPreferences(String preferencesUrl, String userId)",
+  "class": "NotificationPreferences"
+ },
+ "go": {
+  "function": "GetNotificationPreferences",
+  "signature": "func GetNotificationPreferences(preferencesURL, userID string) map[string]any"
+ }
+}

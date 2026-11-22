@@ -1,0 +1,17 @@
+{
+ "frozen_at": "2026-11-19T09:31:56+0100",
+ "sha256": {
+  "protocol/ABLATION_ADDENDUM.md": "17db091ad396897c35729c65af9f19a8ca2a7b0ec1c5cff0e84402d7fa36940f",
+  "gen/config/ablation.json": "536895aefdf1366bf9635e932e8d4190e72f8f3b743a49b66a90a8434dbc0d51",
+  "analysis/ablation_analysis.py": "2ca48db8b2ec519cafbcdd3057607c30c8dbb40b9a22826c1259900058739665",
+  "analysis/ablation_model.R": "8758afbf623865a4d2a47b5ecaeb066709d12e2958efec082075ab5f52e7c2a4",
+  "analysis/measures.py": "f7d12fc9c00c241a6484dd8433fc04b34352b63175f643b95ebbdfa13388e0fd",
+  "analysis/checkers_confirm.py": "44f259cf222373bba0fc9754ac1a1f234a56be6fa70fd61e6077964932fb1220",
+  "runner/run_confirm.py": "9527b7a6ad13145fe5ad63e1ecdeb583a841c3f627a3108518ab3cfc1ff94af1",
+  "runner/run_generated.py": "8352811f7cf7e4de403e7dd3cfd81748891a09e0c49441d1ffb087f36c0faa1d",
+  "gen/generate.py": "23443972e6ef2f8351fae48321f1e20d16ddfe3e7d7fea4d14291cff337fe21d",
+  "gen/batch.py": "78fc4319820cfec836f59d450b5a23881199c8a14d97af115ea04886f53ebe7b",
+  "protocol/thresholds.json": "903a48cf49f0b46860c92b70e3768586b06e729399140e952a19c32365b84f1a",
+  "gen/prompts_ablation (768 files, path+content)": "c4be712841023b706b5778507311e3bb0515159364bb9b1b9d8f3983bae57ce8"
+ }
+}

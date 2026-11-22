@@ -1,0 +1,1540 @@
+task: W3
+title: Upload a document to a fixed path
+group: write
+status: frozen with protocol v1 (E6)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: document store
+    port: 9001
+fault_dependency: A
+faulted_request: PUT /v1/documents/{doc_id}
+logical_call_key: doc_id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: true
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S8
+- S9
+correct_result:
+  value: metadata with size and sha256 of the UTF-8 content
+degraded_result: null
+effects_constraint: the final stored content equals the given content if the function returned
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S8:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: Success or an error; retries are safe.
+args:
+  warmup:
+  - '{A}'
+  - doc-000
+  - warm-up
+  single:
+  - '{A}'
+  - doc-042
+  - 'Quarterly summary
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    Revenue grew in every region.
+
+    '
+  s7:
+  - - '{A}'
+    - doc-100
+    - 'Document 0
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-101
+    - 'Document 1
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-102
+    - 'Document 2
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-103
+    - 'Document 3
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-104
+    - 'Document 4
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-105
+    - 'Document 5
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-106
+    - 'Document 6
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-107
+    - 'Document 7
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-108
+    - 'Document 8
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '
+  - - '{A}'
+    - doc-109
+    - 'Document 9
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      Line of text.
+
+      '

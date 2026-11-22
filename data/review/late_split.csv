@@ -1,0 +1,11 @@
+group,solutions,late_registered_pct,late_http_pct,late_syn_only_pct
+C0 all,1271,10.2,1.7,8.5
+C0 go,290,3.1,0.3,2.8
+C0 java,258,1.9,0.4,1.6
+C0 python,379,6.1,5.0,1.1
+C0 typescript,344,27.0,0.3,26.7
+C2 all,1260,16.6,1.5,15.1
+C2 go,287,1.0,0.3,0.7
+C2 java,263,0.4,0.4,0.0
+C2 python,370,4.1,4.1,0.0
+C2 typescript,340,55.9,0.6,55.3

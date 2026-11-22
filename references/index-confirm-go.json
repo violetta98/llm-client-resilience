@@ -1,0 +1,128 @@
+[
+ {
+  "task": "R6",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/R6/go/solution.go"
+ },
+ {
+  "task": "R6",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R6/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "R6",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R6/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "R6",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R6/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "R6",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R6/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/W5/go/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W5/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W5/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W5/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W5/go/UNSAFE_POST_RETRY/solution.go"
+ },
+ {
+  "task": "W5",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W5/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "B5",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/B5/go/solution.go"
+ },
+ {
+  "task": "B5",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B5/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "B5",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B5/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "B5",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B5/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "B5",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B5/go/FIXED_BACKOFF/solution.go"
+ },
+ {
+  "task": "H4",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "references/H4/go/solution.go"
+ },
+ {
+  "task": "H4",
+  "lang": "go",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H4/go/NO_TIMEOUT/solution.go"
+ },
+ {
+  "task": "H4",
+  "lang": "go",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H4/go/TIGHT_LOOP/solution.go"
+ },
+ {
+  "task": "H4",
+  "lang": "go",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H4/go/IGNORE_RETRY_AFTER/solution.go"
+ },
+ {
+  "task": "H4",
+  "lang": "go",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H4/go/FIXED_BACKOFF/solution.go"
+ }
+]

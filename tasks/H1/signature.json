@@ -1,0 +1,87 @@
+{
+ "task": "H1",
+ "deps": [
+  "A",
+  "B"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "{B}",
+  "u-000"
+ ],
+ "single_args": [
+  "{A}",
+  "{B}",
+  "u-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "{B}",
+   "u-100"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-101"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-102"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-103"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-104"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-105"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-106"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-107"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-108"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "u-109"
+  ]
+ ],
+ "python": {
+  "function": "get_profile_page",
+  "signature": "def get_profile_page(profile_url: str, recommendations_url: str, user_id: str) -> dict"
+ },
+ "typescript": {
+  "function": "getProfilePage",
+  "signature": "export async function getProfilePage(profileUrl: string, recommendationsUrl: string, userId: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getProfilePage",
+  "signature": "public static Map<String, Object> getProfilePage(String profileUrl, String recommendationsUrl, String userId) throws ProfilePageException",
+  "class": "ProfilePageHandler"
+ },
+ "go": {
+  "function": "GetProfilePage",
+  "signature": "func GetProfilePage(profileURL, recommendationsURL, userID string) (map[string]any, error)"
+ }
+}

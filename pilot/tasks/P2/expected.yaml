@@ -1,0 +1,110 @@
+task: P2
+title: Add a comment to a support ticket; the API has no idempotency support
+group: write
+status: PILOT task (outside the benchmark; brief E5)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: helpdesk API
+    port: 9001
+fault_dependency: A
+faulted_request: POST /v1/tickets/{id}/comments
+logical_call_key: ticket_id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: true
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S8
+- S9
+correct_result:
+  value: a comment id cmt_<n>
+degraded_result: null
+effects_constraint: at most one comment_created per ticket
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S8:
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: At most one comment; an error when the outcome is unknown (S8).
+args:
+  warmup:
+  - '{A}'
+  - t-000
+  - warm-up
+  single:
+  - '{A}'
+  - t-042
+  - The replacement part was shipped today.
+  s7:
+  - - '{A}'
+    - t-100
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-101
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-102
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-103
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-104
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-105
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-106
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-107
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-108
+    - The replacement part was shipped today.
+  - - '{A}'
+    - t-109
+    - The replacement part was shipped today.
+unsafe_effect: comment_created

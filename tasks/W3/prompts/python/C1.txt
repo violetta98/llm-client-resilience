@@ -1,0 +1,12 @@
+Write a Python function:
+  def upload_document(base_url: str, doc_id: str, content: str) -> dict
+It uploads the text content as the document doc_id (UTF-8) and returns the document metadata from
+the response. Raise UploadError if the document cannot be uploaded.
+API: PUT {base_url}/v1/documents/{doc_id}, body: the content (Content-Type: text/plain; charset=utf-8)
+  200: stored, JSON {id, size, sha256, version}; uploading to the same path replaces the document.
+  400: empty body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

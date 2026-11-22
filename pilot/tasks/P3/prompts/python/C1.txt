@@ -1,0 +1,12 @@
+Write a Python function:
+  def estimate_delivery_days(shipping_url: str, postal_code: str) -> int
+It returns the estimated number of delivery days for the postal code, shown on a checkout page. It
+runs inside a web request handler and must return within 2 s. If the estimate cannot be obtained in
+time, it returns 5, the documented default.
+API (shipping service): GET {shipping_url}/v1/estimates?postal_code={postal_code}
+  200: JSON {postal_code, days}. 404: unknown postal code.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

@@ -1,0 +1,5 @@
+lang,programs,hang_S4g05,overrun_BH_S4g05,hang_S4,overrun_BH_S4,hang_S4g5,overrun_BH_S4g5,hang_S4h,overrun_BH_S4h
+go,148,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+java,137,55.5,28.8,53.3,30.5,54.0,28.8,53.3,28.8
+python,205,74.6,51.4,63.4,40.5,42.9,32.4,2.0,12.2
+typescript,184,13.0,8.0,13.0,8.0,13.0,8.0,13.0,8.0

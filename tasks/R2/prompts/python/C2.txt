@@ -1,0 +1,15 @@
+Write a Python function:
+  def search_products(base_url: str, query: str, category: str, max_price: float) -> list[dict]
+It searches the product catalog and returns the list of matching products (the "items" array of the
+response). Raise SearchError if the search cannot be performed.
+API: GET {base_url}/v1/products?q={query}&category={category}&max_price={max_price}
+  200: JSON {items: [{id, name, category, price}], total}. 400: invalid parameters.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

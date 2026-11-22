@@ -1,0 +1,52 @@
+{
+ "images": {
+  "lcr-mock:dev": {
+   "id": "sha256:e5cfe4b01061514caa200eba0a9e5533aeaa3c2037dbd1eaa07d06622d914dc4"
+  },
+  "lcr-run-python:dev": {
+   "id": "sha256:bdc49afd3e681409b03a76e7cef3589b84007887cbfeaf5d5a795beb18c8f155",
+   "libraries": [
+    "aiohappyeyeballs==2.7.1",
+    "aiohttp==3.14.5",
+    "aiosignal==1.4.0",
+    "anyio==4.16.0",
+    "attrs==26.1.0",
+    "backoff==2.2.1",
+    "certifi==2026.10.23",
+    "charset-normalizer==3.5.2",
+    "frozenlist==1.8.0",
+    "h11==0.16.0",
+    "httpcore==1.0.9",
+    "httpx==0.28.1",
+    "idna==3.20",
+    "multidict==7.2.1",
+    "propcache==0.5.4",
+    "requests==2.34.2",
+    "tenacity==9.2.1",
+    "typing_extensions==4.16.0",
+    "urllib3==2.8.0",
+    "yarl==1.25.1"
+   ]
+  },
+  "lcr-run-node:dev": {
+   "id": "sha256:05750d0a75755da5fe114a59c75034b5303ca69e2f66d423b29c70ce9cf901e5"
+  },
+  "lcr-run-java:dev": {
+   "id": "sha256:a54c2fcb658e9c9282b43a1ee02b76d86b1c88477112ab2c7db49b7376b707ff"
+  },
+  "lcr-build-java:dev": {
+   "id": "sha256:a54c2fcb658e9c9282b43a1ee02b76d86b1c88477112ab2c7db49b7376b707ff"
+  },
+  "lcr-build-go:dev": {
+   "id": "sha256:5c9c7ffe7d2f6e723479d00125fd572603ec1f62915a0dca891a7eb26ff01920"
+  },
+  "lcr-run-go:dev": {
+   "id": "sha256:40be1de1ca90569b4f74e924acf0df725b36c0d731e20068a90ecb8f0426dcc2"
+  },
+  "lcr-probe:dev": {
+   "id": "sha256:bca7b855e16e0e58f752f0f13e777c6640d1753132993213c54d4d88b7c44658"
+  }
+ },
+ "host": "Darwin <host> 23.1.0 Darwin Kernel Version 23.1.0: Mon Oct  9 21:27:27 PDT 2023; root:xnu-10002.41.9~6/RELEASE_X86_64 x86_64",
+ "docker": "24.0.6"
+}

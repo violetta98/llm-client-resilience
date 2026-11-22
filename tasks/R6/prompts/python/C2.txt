@@ -1,0 +1,16 @@
+Write a Python function:
+  def get_stock_levels(base_url: str, product_id: str) -> dict
+It fetches the stock levels of the product in every warehouse from the inventory service and returns
+the stock object from the response. Raise StockError if the stock levels cannot be fetched.
+API: GET {base_url}/v1/products/{product_id}/stock
+  200: JSON {product_id, warehouses: [{warehouse_id, available, reserved}], updated_at}. 404:
+  product not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

@@ -1,0 +1,111 @@
+{
+ "task": "B3",
+ "deps": [
+  "A",
+  "B"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "{B}",
+  "client-1",
+  "s3cr3t",
+  "acc-000"
+ ],
+ "single_args": [
+  "{A}",
+  "{B}",
+  "client-1",
+  "s3cr3t",
+  "acc-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-100"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-101"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-102"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-103"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-104"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-105"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-106"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-107"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-108"
+  ],
+  [
+   "{A}",
+   "{B}",
+   "client-1",
+   "s3cr3t",
+   "acc-109"
+  ]
+ ],
+ "python": {
+  "function": "get_account_balance",
+  "signature": "def get_account_balance(auth_url: str, api_url: str, client_id: str, client_secret: str, account_id: str) -> dict"
+ },
+ "typescript": {
+  "function": "getAccountBalance",
+  "signature": "export async function getAccountBalance(authUrl: string, apiUrl: string, clientId: string, clientSecret: string, accountId: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getAccountBalance",
+  "signature": "public static Map<String, Object> getAccountBalance(String authUrl, String apiUrl, String clientId, String clientSecret, String accountId) throws BalanceException",
+  "class": "BalanceClient"
+ },
+ "go": {
+  "function": "GetAccountBalance",
+  "signature": "func GetAccountBalance(authURL, apiURL, clientID, clientSecret, accountID string) (map[string]any, error)"
+ }
+}

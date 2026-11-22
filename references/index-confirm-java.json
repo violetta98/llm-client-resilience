@@ -1,0 +1,128 @@
+[
+ {
+  "task": "R6",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R6/java/solution.java"
+ },
+ {
+  "task": "R6",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R6/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "R6",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R6/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "R6",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R6/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "R6",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R6/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/W5/java/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W5/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W5/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W5/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W5/java/UNSAFE_POST_RETRY/solution.java"
+ },
+ {
+  "task": "W5",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W5/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "B5",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/B5/java/solution.java"
+ },
+ {
+  "task": "B5",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B5/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "B5",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B5/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "B5",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B5/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "B5",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B5/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "H4",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/H4/java/solution.java"
+ },
+ {
+  "task": "H4",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H4/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "H4",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H4/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "H4",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H4/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "H4",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H4/java/FIXED_BACKOFF/solution.java"
+ }
+]

@@ -1,0 +1,74 @@
+{
+ "task": "W4",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "sub-000"
+ ],
+ "single_args": [
+  "{A}",
+  "sub-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "sub-100"
+  ],
+  [
+   "{A}",
+   "sub-101"
+  ],
+  [
+   "{A}",
+   "sub-102"
+  ],
+  [
+   "{A}",
+   "sub-103"
+  ],
+  [
+   "{A}",
+   "sub-104"
+  ],
+  [
+   "{A}",
+   "sub-105"
+  ],
+  [
+   "{A}",
+   "sub-106"
+  ],
+  [
+   "{A}",
+   "sub-107"
+  ],
+  [
+   "{A}",
+   "sub-108"
+  ],
+  [
+   "{A}",
+   "sub-109"
+  ]
+ ],
+ "python": {
+  "function": "cancel_subscription",
+  "signature": "def cancel_subscription(base_url: str, subscription_id: str) -> None"
+ },
+ "typescript": {
+  "function": "cancelSubscription",
+  "signature": "export async function cancelSubscription(baseUrl: string, subscriptionId: string): Promise<void>"
+ },
+ "java": {
+  "function": "cancelSubscription",
+  "signature": "public static void cancelSubscription(String baseUrl, String subscriptionId) throws SubscriptionException",
+  "class": "SubscriptionClient"
+ },
+ "go": {
+  "function": "CancelSubscription",
+  "signature": "func CancelSubscription(baseURL, subscriptionID string) error"
+ }
+}

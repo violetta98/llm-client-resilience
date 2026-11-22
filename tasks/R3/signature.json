@@ -1,0 +1,86 @@
+{
+ "task": "R3",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "rep-000",
+  "/tmp/rep-000.bin"
+ ],
+ "single_args": [
+  "{A}",
+  "rep-042",
+  "/tmp/rep-042.bin"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "rep-100",
+   "/tmp/rep-100.bin"
+  ],
+  [
+   "{A}",
+   "rep-101",
+   "/tmp/rep-101.bin"
+  ],
+  [
+   "{A}",
+   "rep-102",
+   "/tmp/rep-102.bin"
+  ],
+  [
+   "{A}",
+   "rep-103",
+   "/tmp/rep-103.bin"
+  ],
+  [
+   "{A}",
+   "rep-104",
+   "/tmp/rep-104.bin"
+  ],
+  [
+   "{A}",
+   "rep-105",
+   "/tmp/rep-105.bin"
+  ],
+  [
+   "{A}",
+   "rep-106",
+   "/tmp/rep-106.bin"
+  ],
+  [
+   "{A}",
+   "rep-107",
+   "/tmp/rep-107.bin"
+  ],
+  [
+   "{A}",
+   "rep-108",
+   "/tmp/rep-108.bin"
+  ],
+  [
+   "{A}",
+   "rep-109",
+   "/tmp/rep-109.bin"
+  ]
+ ],
+ "python": {
+  "function": "download_report",
+  "signature": "def download_report(base_url: str, report_id: str, dest_path: str) -> int"
+ },
+ "typescript": {
+  "function": "downloadReport",
+  "signature": "export async function downloadReport(baseUrl: string, reportId: string, destPath: string): Promise<number>"
+ },
+ "java": {
+  "function": "downloadReport",
+  "signature": "public static int downloadReport(String baseUrl, String reportId, String destPath) throws DownloadException",
+  "class": "ReportDownloader"
+ },
+ "go": {
+  "function": "DownloadReport",
+  "signature": "func DownloadReport(baseURL, reportID, destPath string) (int, error)"
+ }
+}

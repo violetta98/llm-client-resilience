@@ -1,0 +1,200 @@
+[
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R1/java/solution.java"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/R1/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/R1/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/R1/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/R1/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "R2",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R2/java/solution.java"
+ },
+ {
+  "task": "R3",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R3/java/solution.java"
+ },
+ {
+  "task": "R4",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R4/java/solution.java"
+ },
+ {
+  "task": "R5",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/R5/java/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/W1/java/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/W1/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/W1/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/W1/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "UNSAFE_POST_RETRY",
+  "path": "mutants/W1/java/UNSAFE_POST_RETRY/solution.java"
+ },
+ {
+  "task": "W1",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/W1/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/W2/java/solution.java"
+ },
+ {
+  "task": "W3",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/W3/java/solution.java"
+ },
+ {
+  "task": "W4",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/W4/java/solution.java"
+ },
+ {
+  "task": "B1",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/B1/java/solution.java"
+ },
+ {
+  "task": "B2",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/B2/java/solution.java"
+ },
+ {
+  "task": "B2",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/B2/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "B2",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/B2/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "B2",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/B2/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "B2",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/B2/java/FIXED_BACKOFF/solution.java"
+ },
+ {
+  "task": "B3",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/B3/java/solution.java"
+ },
+ {
+  "task": "B4",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/B4/java/solution.java"
+ },
+ {
+  "task": "H1",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/H1/java/solution.java"
+ },
+ {
+  "task": "H2",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/H2/java/solution.java"
+ },
+ {
+  "task": "H3",
+  "lang": "java",
+  "variant": "REFERENCE",
+  "path": "references/H3/java/solution.java"
+ },
+ {
+  "task": "H3",
+  "lang": "java",
+  "variant": "NO_TIMEOUT",
+  "path": "mutants/H3/java/NO_TIMEOUT/solution.java"
+ },
+ {
+  "task": "H3",
+  "lang": "java",
+  "variant": "TIGHT_LOOP",
+  "path": "mutants/H3/java/TIGHT_LOOP/solution.java"
+ },
+ {
+  "task": "H3",
+  "lang": "java",
+  "variant": "IGNORE_RETRY_AFTER",
+  "path": "mutants/H3/java/IGNORE_RETRY_AFTER/solution.java"
+ },
+ {
+  "task": "H3",
+  "lang": "java",
+  "variant": "FIXED_BACKOFF",
+  "path": "mutants/H3/java/FIXED_BACKOFF/solution.java"
+ }
+]

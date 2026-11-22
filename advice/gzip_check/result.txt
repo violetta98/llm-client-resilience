@@ -1,0 +1,14 @@
+whole | py-read1 (read1): error ProfileError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+whole | py-httpx-iterraw (iter_raw): error ProfileError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+whole | py-retry-deadline (read1, decode_content=True): ok
+whole | httpx iter_bytes: ok
+whole | py-read1-decode: ok
+whole | py-shutdown: ok
+whole | py-asyncio-timeout: ok
+trickled | py-read1 (read1): error ProfileError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+trickled | py-httpx-iterraw (iter_raw): error ProfileError: 'utf-8' codec can't decode byte 0x8b in position 1: invalid start byte
+trickled | py-retry-deadline (read1, decode_content=True): ok
+trickled | httpx iter_bytes: ok
+trickled | py-read1-decode: ok
+trickled | py-shutdown: ok
+trickled | py-asyncio-timeout: ok

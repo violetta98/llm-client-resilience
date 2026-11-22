@@ -1,0 +1,63 @@
+{
+ "run": "repair",
+ "note": "D40: Claude Opus 5.5, synchronous, both arms; the 25 R0 requests already in a batch stay there",
+ "conditions": [
+  "R0",
+  "R1"
+ ],
+ "tasks": [
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "H1",
+  "H2",
+  "H3",
+  "R1",
+  "R2",
+  "R3",
+  "R4",
+  "R5",
+  "W1",
+  "W2",
+  "W3",
+  "W4"
+ ],
+ "langs": [
+  "python",
+  "typescript",
+  "java",
+  "go"
+ ],
+ "samples": 3,
+ "models": [
+  {
+   "id": "claude-opus-5.5",
+   "provider": "openai_compat",
+   "base_url": "https://openrouter.ai/api/v1",
+   "model": "anthropic/claude-opus-5.5",
+   "snapshot": "anthropic/claude-opus-5.5-20260921",
+   "mode": "sync",
+   "api_key_env": "OPENROUTER_API_KEY",
+   "params": {
+    "max_tokens": 64000
+   },
+   "seed_param": "seed",
+   "price_usd_per_mtok": {
+    "input": 4.0,
+    "output": 20.0
+   },
+   "max_output_tokens_for_budget": 64000,
+   "request_timeout_s": 1200,
+   "max_api_attempts": 12,
+   "backoff_cap_s": 300,
+   "min_interval_s": 1,
+   "note": "seed not supported by the API (dropped); D40: remaining repair requests sent synchronously at the OpenRouter list price (4/20 per Mtok, 2026-11-15), because one batch per model was still queued after 3 h",
+   "batch_provider_only": [
+    "anthropic"
+   ]
+  }
+ ],
+ "provider_policy": "first-party endpoint of the model's vendor where the gateway has one; otherwise the cheapest unquantized (bf16) endpoint; pinned with allow_fallbacks=false; provider_returned is logged per response",
+ "prompt_dir": "data/repair/prompts"
+}

@@ -1,0 +1,4 @@
+"outcome","step","ok","n","events","warnings"
+"s3_no_return","full",TRUE,2531,78,""
+"overrun","full",TRUE,1120,220,""
+"unsafe_write","task fixed (protocol)",FALSE,469,14,"Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')"

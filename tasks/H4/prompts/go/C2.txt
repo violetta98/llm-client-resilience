@@ -1,0 +1,17 @@
+Write a Go function:
+  func GetNotificationPreferences(preferencesURL, userID string) map[string]any
+It returns the user's notification preferences {"email": <bool>, "sms": <bool>, "push": <bool>} for
+the settings page. It runs inside a web request handler and must return within 2 s. If the
+preferences cannot be obtained in time, it returns the documented default {"email": true, "sms":
+false, "push": false}.
+API (preference service): GET {preferencesURL}/v1/users/{userID}/notification-preferences
+  200: JSON {user_id, email, sms, push, updated_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

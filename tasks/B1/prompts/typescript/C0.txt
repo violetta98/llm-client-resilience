@@ -1,0 +1,12 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function syncRecords(baseUrl: string, records: Array<Record<string, unknown>>): Promise<number>
+It writes every record to the records API (one PUT per record, in any order) and returns the number
+of records written. The function runs as a batch job with a time limit of 30 s: it must return or
+throw within 30 s. Throw a SyncError if not all records can be written.
+API: PUT {baseUrl}/v1/records/{id}, JSON body: the record
+  200: stored, JSON {id, version}; writing the same record again replaces it. 400: invalid record.
+  The API allows 10 requests per second per client.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Respond with the complete code in a single code block.

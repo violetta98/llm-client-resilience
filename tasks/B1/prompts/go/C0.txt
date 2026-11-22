@@ -1,0 +1,12 @@
+Write a Go function:
+  func SyncRecords(baseURL string, records []map[string]any) (int, error)
+It writes every record to the records API (one PUT per record, in any order) and returns the number
+of records written. The function runs as a batch job with a time limit of 30 s: it must return
+within 30 s. Return an error if not all records can be written.
+API: PUT {baseURL}/v1/records/{id}, JSON body: the record
+  200: stored, JSON {id, version}; writing the same record again replaces it. 400: invalid record.
+  The API allows 10 requests per second per client.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

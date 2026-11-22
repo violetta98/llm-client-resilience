@@ -1,0 +1,16 @@
+Write a Python function:
+  def get_account_balance(auth_url: str, api_url: str, client_id: str, client_secret: str, account_id: str) -> dict
+It obtains an access token with the client credentials and uses it to fetch the balance of the
+account; it returns the balance object from the response. It runs as a batch job with a time limit
+of 30 s: it must return or raise within 30 s. Raise BalanceError if the balance cannot be fetched.
+API (authorization server): POST {auth_url}/oauth/token, form body grant_type=client_credentials&client_id=…&client_secret=…
+  200: JSON {access_token, token_type: "Bearer", expires_in}. 401: invalid client.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+API (accounts API): GET {api_url}/v1/accounts/{account_id}/balance, header Authorization: Bearer <access_token>
+  200: JSON {account_id, balance, currency}. 401: missing, invalid or expired token. 404: account
+  not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Respond with the complete code in a single code block.

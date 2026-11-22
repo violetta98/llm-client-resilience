@@ -1,0 +1,132 @@
+task: H3
+title: Return the best price from three suppliers queried in parallel
+group: handler
+status: frozen with protocol v1 (E6)
+time_limit_s: 3
+overrun_threshold_s: 3.25
+dependencies:
+  A:
+    name: supplier 1
+    port: 9001
+  B:
+    name: supplier 2
+    port: 9002
+  C:
+    name: supplier 3
+    port: 9003
+fault_dependency: A
+faulted_request: the request to supplier 1 (the cheapest)
+logical_call_key: supplier + sku
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value:
+    supplier: s1
+    sku: sku-042
+    price: 9.4
+    currency: EUR
+degraded_result:
+  value:
+    supplier: s2
+    sku: sku-042
+    price: 10.1
+    currency: EUR
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: The best price of the other two within 3 s.
+args:
+  warmup:
+  - - '{A}'
+    - '{B}'
+    - '{C}'
+  - sku-000
+  single:
+  - - '{A}'
+    - '{B}'
+    - '{C}'
+  - sku-042
+  s7:
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-100
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-101
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-102
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-103
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-104
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-105
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-106
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-107
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-108
+  - - - '{A}'
+      - '{B}'
+      - '{C}'
+    - sku-109

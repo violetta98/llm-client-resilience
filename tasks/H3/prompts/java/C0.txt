@@ -1,0 +1,11 @@
+Write a Java method in a public class PriceComparison:
+  public static Map<String, Object> bestPrice(List<String> supplierUrls, String sku) throws NoQuoteException
+It asks every supplier for a quote, in parallel, and returns the quote with the lowest price. It
+runs inside a web request handler and must return within 3 s. Suppliers that fail or do not answer
+in time are ignored. Throw a NoQuoteException if no supplier returns a quote.
+API (each supplier): GET {supplier_url}/v1/quotes?sku={sku}
+  200: JSON {supplier, sku, price, currency}. 404: unknown SKU.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+Respond with the complete code in a single code block.

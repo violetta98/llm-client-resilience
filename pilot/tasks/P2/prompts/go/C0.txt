@@ -1,0 +1,11 @@
+Write a Go function:
+  func AddTicketComment(baseURL, ticketID, text string) (string, error)
+It adds the comment text to the support ticket and returns the comment ID from the response. Return
+an error if the comment cannot be added.
+API: POST {baseURL}/v1/tickets/{ticketID}/comments, JSON body {text}
+  201: comment added, JSON {id, ticket_id, created_at}. 400: empty text. 404: ticket not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint does not support idempotency keys.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

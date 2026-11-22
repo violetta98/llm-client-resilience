@@ -1,0 +1,31 @@
+"outcome","family","contrast","estimate","lo","hi","scale","test","p","p_holm"
+"s3_no_return","A","claude-haiku-5.5: C2 vs C0",-0.0117647058823529,-0.0297663601368691,0,"difference in proportions","bootstrap (separation)",0.264,1
+"s3_no_return","A","claude-opus-5.5: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"s3_no_return","A","deepseek-v4.1-flash: C2 vs C0",-0.00546448087431694,-0.0175438596491228,0,"difference in proportions","bootstrap (separation)",0.751,1
+"s3_no_return","A","gemini-4-argon: C2 vs C0",-0.00537634408602151,-0.0194198437130002,0,"difference in proportions","bootstrap (separation)",0.723,1
+"s3_no_return","A","gpt-6.1-sol: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"s3_no_return","A","granite-4.2-8b: C2 vs C0",0.64337235869666,0.303061907815384,1.36581992411615,"OR","Wald",0.250846279343007,1
+"s3_no_return","A","kimi-k3: C2 vs C0",-0.00543478260869565,-0.017546439628483,0,"difference in proportions","bootstrap (separation)",0.731,1
+"s3_no_return","A","qwen3-coder-next: C2 vs C0",0.730145440049239,0.267856270331951,1.99029264076595,"OR","LR",0.538228580132966,1
+"s3_no_return","B","flagship vs others, C0",-0.0898773520286912,-0.113374491382282,-0.0671607472336475,"difference in proportions","bootstrap (separation)",0,0
+"s3_no_return","B","flagship vs others, C2",-0.0671717171717172,-0.0902056415964131,-0.0464363984573467,"difference in proportions","bootstrap (separation)",0,0
+"overrun","A","claude-haiku-5.5: C2 vs C0",0.13493924268313,0.0382431931881972,0.476126539075618,"OR","LR",0.00106420258844272,0.00851362070754175
+"overrun","A","claude-opus-5.5: C2 vs C0",0.0884811181756942,0.00872527426857568,0.897267871775353,"OR","LR",0.0158272767411048,0.110790937187734
+"overrun","A","deepseek-v4.1-flash: C2 vs C0",1.09586890185225,0.358258414885056,3.35212963645854,"OR","LR",0.87248568847137,1
+"overrun","A","gemini-4-argon: C2 vs C0",0.594036864188069,0.202877485600319,1.73937386383814,"OR","LR",0.34067609342297,1
+"overrun","A","gpt-6.1-sol: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"overrun","A","granite-4.2-8b: C2 vs C0",2.10242687192573,0.676050060028335,6.53827136944585,"OR","LR",0.196547171164928,1
+"overrun","A","kimi-k3: C2 vs C0",1.88707977098828,0.67121893498114,5.30537783796763,"OR","LR",0.227208920463139,1
+"overrun","A","qwen3-coder-next: C2 vs C0",1.44090364577695,0.463460847640701,4.47978146801924,"OR","LR",0.527573699256404,1
+"overrun","B","flagship vs others, C0",-0.209146556554671,-0.271555453589456,-0.146201430652701,"difference in proportions","bootstrap (separation)",0,0
+"overrun","B","flagship vs others, C2",-0.261656739405277,-0.323553080407236,-0.202741351243788,"difference in proportions","bootstrap (separation)",0,0
+"unsafe_write","A","claude-haiku-5.5: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"unsafe_write","A","claude-opus-5.5: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"unsafe_write","A","deepseek-v4.1-flash: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"unsafe_write","A","gemini-4-argon: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"unsafe_write","A","gpt-6.1-sol: C2 vs C0",0,0,0,"difference in proportions","bootstrap (separation)",1,1
+"unsafe_write","A","granite-4.2-8b: C2 vs C0",0.208333333333333,-0.0912780112044818,0.5,"difference in proportions","bootstrap (no model)",0.157,1
+"unsafe_write","A","kimi-k3: C2 vs C0",-0.0588235294117647,-0.151515151515152,0,"difference in proportions","bootstrap (separation)",0.259,1
+"unsafe_write","A","qwen3-coder-next: C2 vs C0",0.0666666666666667,-0.15,0.285714285714286,"difference in proportions","bootstrap (no model)",0.578,1
+"unsafe_write","B","flagship vs others, C0",-0.0567647058823529,-0.104968722943723,-0.0153846153846154,"difference in proportions","bootstrap (separation)",0.008,0.008
+"unsafe_write","B","flagship vs others, C2",-0.1,-0.16,-0.0439453781512606,"difference in proportions","bootstrap (separation)",0,0

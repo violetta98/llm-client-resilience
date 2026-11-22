@@ -1,0 +1,14 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+  <!-- Libraries offered to the models for Java (draft Section IV-B), pinned;
+       java.net.http.HttpClient is part of the JDK. Jackson and Gson: JSON
+       (the JDK has no JSON API) - see DEVIATIONS.md D10. -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>lcr</groupId><artifactId>offered-libraries</artifactId><version>1</version>
+  <dependencies>
+    <dependency><groupId>com.squareup.okhttp3</groupId><artifactId>okhttp-jvm</artifactId><version>5.5.0</version></dependency>
+    <dependency><groupId>org.apache.httpcomponents.client5</groupId><artifactId>httpclient5</artifactId><version>5.6.5</version></dependency>
+    <dependency><groupId>io.github.resilience4j</groupId><artifactId>resilience4j-retry</artifactId><version>2.4.0</version></dependency>
+    <dependency><groupId>com.fasterxml.jackson.core</groupId><artifactId>jackson-databind</artifactId><version>2.22.3</version></dependency>
+    <dependency><groupId>com.google.code.gson</groupId><artifactId>gson</artifactId><version>2.14.0</version></dependency>
+  </dependencies>
+</project>

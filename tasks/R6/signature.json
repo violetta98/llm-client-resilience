@@ -1,0 +1,74 @@
+{
+ "task": "R6",
+ "deps": [
+  "A"
+ ],
+ "status": "confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)",
+ "warmup_args": [
+  "{A}",
+  "prd-000"
+ ],
+ "single_args": [
+  "{A}",
+  "prd-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "prd-100"
+  ],
+  [
+   "{A}",
+   "prd-101"
+  ],
+  [
+   "{A}",
+   "prd-102"
+  ],
+  [
+   "{A}",
+   "prd-103"
+  ],
+  [
+   "{A}",
+   "prd-104"
+  ],
+  [
+   "{A}",
+   "prd-105"
+  ],
+  [
+   "{A}",
+   "prd-106"
+  ],
+  [
+   "{A}",
+   "prd-107"
+  ],
+  [
+   "{A}",
+   "prd-108"
+  ],
+  [
+   "{A}",
+   "prd-109"
+  ]
+ ],
+ "python": {
+  "function": "get_stock_levels",
+  "signature": "def get_stock_levels(base_url: str, product_id: str) -> dict"
+ },
+ "typescript": {
+  "function": "getStockLevels",
+  "signature": "export async function getStockLevels(baseUrl: string, productId: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getStockLevels",
+  "signature": "public static Map<String, Object> getStockLevels(String baseUrl, String productId) throws StockException",
+  "class": "StockClient"
+ },
+ "go": {
+  "function": "GetStockLevels",
+  "signature": "func GetStockLevels(baseURL, productID string) (map[string]any, error)"
+ }
+}

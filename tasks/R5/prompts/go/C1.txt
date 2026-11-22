@@ -1,0 +1,11 @@
+Write a Go function:
+  func IsFeatureEnabled(baseURL, flagKey string) bool
+It returns whether the feature flag is enabled. If the flag service fails or cannot be reached, it
+returns false, the documented default for every flag.
+API: GET {baseURL}/v1/flags/{flagKey}
+  200: JSON {key, enabled}. 404: unknown flag.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

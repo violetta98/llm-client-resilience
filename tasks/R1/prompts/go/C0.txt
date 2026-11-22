@@ -1,0 +1,10 @@
+Write a Go function:
+  func GetUserProfile(baseURL, userID string) (map[string]any, error)
+It fetches the profile of the user with the given ID from the user service and returns the profile
+object from the response. Return an error if the profile cannot be fetched.
+API: GET {baseURL}/v1/users/{userID}
+  200: the profile, JSON {id, name, email, created_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

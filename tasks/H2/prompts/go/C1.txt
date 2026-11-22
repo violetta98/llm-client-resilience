@@ -1,0 +1,12 @@
+Write a Go function:
+  func IsDependencyReady(dependencyURL string) bool
+It is called by the readiness probe of a service and reports whether the dependency is ready. It
+must return within 1 s. It returns false if the dependency is not ready, fails, or does not answer
+in time.
+API (dependency): GET {dependencyURL}/healthz
+  200: JSON {status: "ok"}, ready. Any other response: not ready.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

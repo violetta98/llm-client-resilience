@@ -1,0 +1,9 @@
+scenario,cond,tasks,solutions,rapid,rapid_and_within_limit
+S9,C0,H,249,6.0,15
+S9,C0,other,942,1.9,
+S9,C2,H,236,52.1,123
+S9,C2,other,949,12.4,
+S7,C0,H,249,0.0,0
+S7,C0,other,1021,0.0,
+S7,C2,H,236,0.0,0
+S7,C2,other,1024,0.1,

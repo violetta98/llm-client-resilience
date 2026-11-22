@@ -1,0 +1,98 @@
+task: R1
+title: Fetch a user profile
+group: read
+status: frozen with protocol v1 (E6)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: user service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/users/{user_id} (the only request)
+logical_call_key: user_id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value:
+    id: u-042
+    name: User 042
+    email: user042@example.com
+    created_at: '2024-01-15T09:30:00Z'
+degraded_result: null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: Correct result, or an error.
+args:
+  warmup:
+  - '{A}'
+  - u-000
+  single:
+  - '{A}'
+  - u-042
+  s7:
+  - - '{A}'
+    - u-100
+  - - '{A}'
+    - u-101
+  - - '{A}'
+    - u-102
+  - - '{A}'
+    - u-103
+  - - '{A}'
+    - u-104
+  - - '{A}'
+    - u-105
+  - - '{A}'
+    - u-106
+  - - '{A}'
+    - u-107
+  - - '{A}'
+    - u-108
+  - - '{A}'
+    - u-109

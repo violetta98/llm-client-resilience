@@ -1,0 +1,38 @@
+[
+ {
+  "task": "P1",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P1/python/solution.py"
+ },
+ {
+  "task": "P2",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P2/python/solution.py"
+ },
+ {
+  "task": "P3",
+  "lang": "python",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P3/python/solution.py"
+ },
+ {
+  "task": "P1",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P1/go/solution.go"
+ },
+ {
+  "task": "P2",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P2/go/solution.go"
+ },
+ {
+  "task": "P3",
+  "lang": "go",
+  "variant": "REFERENCE",
+  "path": "pilot/references/P3/go/solution.go"
+ }
+]

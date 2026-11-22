@@ -1,0 +1,106 @@
+task: P1
+title: Fetch an exchange rate
+group: read
+status: PILOT task (outside the benchmark; brief E5)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: rates service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/rates/{base}/{quote} (the only request)
+logical_call_key: currency pair
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: '{base: EUR, quote: USD, rate: <mock rate>, as_of}'
+degraded_result: null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: Correct result, or an error.
+args:
+  warmup:
+  - '{A}'
+  - EUR
+  - PLN
+  single:
+  - '{A}'
+  - EUR
+  - USD
+  s7:
+  - - '{A}'
+    - USD
+    - JPY
+  - - '{A}'
+    - USD
+    - GBP
+  - - '{A}'
+    - USD
+    - CHF
+  - - '{A}'
+    - USD
+    - SEK
+  - - '{A}'
+    - USD
+    - NOK
+  - - '{A}'
+    - USD
+    - DKK
+  - - '{A}'
+    - USD
+    - CZK
+  - - '{A}'
+    - USD
+    - HUF
+  - - '{A}'
+    - USD
+    - CAD
+  - - '{A}'
+    - USD
+    - AUD

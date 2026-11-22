@@ -1,0 +1,14 @@
+Write a Java method in a public class PaymentClient:
+  public static Map<String, Object> createPayment(String baseUrl, String orderId, String amount, String currency) throws PaymentException
+It creates a payment with the payment provider and returns the payment object from the response.
+Throw a PaymentException if the payment cannot be created.
+API: POST {baseUrl}/v1/payments, JSON body {order_id, amount, currency}
+  201: payment created, JSON {id, order_id, amount, currency, status}. 400: invalid request. 422:
+  the Idempotency-Key was already used with a different body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+  The endpoint accepts an Idempotency-Key header; requests with the same key within 24 h create at
+  most one payment.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

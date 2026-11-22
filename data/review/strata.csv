@@ -1,0 +1,19 @@
+measure,stratum,cond,n,pct
+S4 no_return_90,read,C0,387,45.5
+S4 no_return_90,read,C2,396,31.3
+S4 no_return_90,write,C0,318,52.8
+S4 no_return_90,write,C2,310,33.9
+S4 no_return_90,background,C0,317,28.1
+S4 no_return_90,background,C2,318,26.1
+S4 no_return_90,handler,C0,249,3.6
+S4 no_return_90,handler,C2,236,4.2
+S4 no_return_90,without Java,C0,1013,27.6
+S4 no_return_90,without Java,C2,997,22.1
+S4 no_return_90,Java only,C0,258,62.8
+S4 no_return_90,Java only,C2,263,38.8
+S7 excessive_retries,all,C0,1270,10.2
+S7 excessive_retries,all,C2,1260,28.4
+S7 excessive_retries,without B2,C0,1189,6.8
+S7 excessive_retries,without B2,C2,1176,25.2
+S7 share of logical calls with >10 attempts (mean over solutions),all,C0,1229,9.4
+S7 share of logical calls with >10 attempts (mean over solutions),all,C2,1228,23.1

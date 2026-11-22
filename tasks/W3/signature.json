@@ -1,0 +1,86 @@
+{
+ "task": "W3",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "doc-000",
+  "warm-up"
+ ],
+ "single_args": [
+  "{A}",
+  "doc-042",
+  "Quarterly summary\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\nRevenue grew in every region.\n"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "doc-100",
+   "Document 0\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-101",
+   "Document 1\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-102",
+   "Document 2\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-103",
+   "Document 3\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-104",
+   "Document 4\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-105",
+   "Document 5\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-106",
+   "Document 6\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-107",
+   "Document 7\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-108",
+   "Document 8\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ],
+  [
+   "{A}",
+   "doc-109",
+   "Document 9\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\nLine of text.\n"
+  ]
+ ],
+ "python": {
+  "function": "upload_document",
+  "signature": "def upload_document(base_url: str, doc_id: str, content: str) -> dict"
+ },
+ "typescript": {
+  "function": "uploadDocument",
+  "signature": "export async function uploadDocument(baseUrl: string, docId: string, content: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "uploadDocument",
+  "signature": "public static Map<String, Object> uploadDocument(String baseUrl, String docId, String content) throws UploadException",
+  "class": "DocumentClient"
+ },
+ "go": {
+  "function": "UploadDocument",
+  "signature": "func UploadDocument(baseURL, docID, content string) (map[string]any, error)"
+ }
+}

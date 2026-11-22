@@ -1,0 +1,5 @@
+cond,solutions,runnable_pct_of_generations,S3_hang_pct,S3_hang_n,S4_hang_pct,S4_hang_n,S4_hang_R6W5_pct,S4_hang_R6W5_n,S4_hang_B5H4_pct,S4_hang_B5H4_n,S5a_correct_pct,S5a_correct_n,S6a_correct_pct,S6a_correct_n,S6a_retry_after_violation_pct,S6a_retry_after_violation_n,S7_retried_pct,S7_retried_n,S7_excessive_pct,S7_excessive_n,S9_excessive_pct,S9_excessive_n,S9_rapid_pct,S9_rapid_n,overrun_stated_limit_B5H4_pct,overrun_stated_limit_B5H4_n,over_10s_R6W5_pct,over_10s_R6W5_n,S7_max_attempts_median,S7_max_attempts_p90
+C0,318,83.1,2.8,318,37.4,318,52.3,155,23.3,163,81.8,318,69.8,318,3.5,318,90.3,318,7.2,318,7.9,318,1.9,318,23.9,163,65.2,155,4,8
+C0b,326,86.2,13.2,326,43.3,326,63.4,164,22.8,162,40.8,326,39.0,326,22.1,326,43.3,326,0.3,326,0.6,326,0.0,326,22.8,162,51.8,164,1,4
+C2,303,80.5,3.0,303,28.7,303,35.4,147,22.4,156,96.0,303,72.3,303,2.3,303,98.0,303,26.1,303,27.1,303,17.5,303,23.7,156,5.4,147,6,15
+C2c,318,84.1,2.8,318,29.9,318,37.3,158,22.5,160,96.9,318,74.2,318,2.5,318,98.4,318,0.3,318,0.0,318,15.4,318,28.1,160,8.9,158,4,4

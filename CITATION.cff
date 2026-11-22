@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "llm-client-resilience: fault-injection benchmark, mock service and analysis scripts"
+message: "If you use this software or data, please cite the paper."
+type: software
+authors:
+  - family-names: Pidvolotska
+    given-names: Violetta
+    orcid: "https://orcid.org/0009-0001-8490-9574"
+    affiliation: "Independent Researcher, Warsaw, Poland"
+    email: "v.pidvolotska@gmail.com"
+license: Apache-2.0
+version: "1.0.0"
+doi: "10.5281/zenodo.24447081"
+repository-code: "https://github.com/violetta98/llm-client-resilience"
+keywords:
+  - empirical software engineering
+  - AI for software engineering
+  - software quality
+  - software reliability
+  - LLM-generated code
+  - fault injection
+  - HTTP clients
+  - timeouts and retries
+  - benchmark
+preferred-citation:
+  type: article
+  title: "A Timeout Is Not a Deadline: An Empirical Study of Timeout and Retry Anti-Patterns in LLM-Generated Code"
+  authors:
+    - family-names: Pidvolotska
+      given-names: Violetta
+      orcid: "https://orcid.org/0009-0001-8490-9574"
+      affiliation: "Independent Researcher, Warsaw, Poland"
+      email: "v.pidvolotska@gmail.com"
+  year: 2026
+  notes: "Manuscript submitted to Software Quality Journal; DOI to be added."

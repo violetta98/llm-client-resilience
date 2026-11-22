@@ -1,0 +1,9 @@
+# check_gzip_slow.py, lcr-run-python:dev (Python 3.13.18, urllib3 2.8.0, requests 2.34.2, HTTPX 0.28.1), --network none, 2026-11-20
+gzip body 1257 bytes (plain 3783), one byte every 2 s, limit 60 s
+py-read1-decode (read1, decode_content=True): no return within 60 s
+py-httpx-iterbytes (iter_bytes): no return within 60 s
+py-retry-deadline (read1, decode_content=True): no return within 60 s
+py-read1-identity (Accept-Encoding: identity): error ProfileError: deadline exceeded after 10.5 s
+py-retry-budget (Accept-Encoding: identity): error ProfileError: deadline exceeded after 10.5 s
+py-shutdown (raw.shutdown timer): error ProfileError: ('Connection broken: IncompleteRead(5 bytes read, 1252 more expected)' after 10.5 s
+py-asyncio-timeout (asyncio.timeout): error ProfileError:  after 10.6 s

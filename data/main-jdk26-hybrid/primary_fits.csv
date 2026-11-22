@@ -1,0 +1,5 @@
+"outcome","step","ok","n","events","warnings"
+"s3_no_return","full",TRUE,2531,78,""
+"overrun","full",FALSE,1120,161,"Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"
+"overrun","drop (1|llm:task)",TRUE,1120,161,""
+"unsafe_write","task fixed (protocol)",FALSE,469,14,"Model convergence problem; non-positive-definite Hessian matrix. See vignette('troubleshooting')"

@@ -1,0 +1,19 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function fetchShipmentUpdates(baseUrl: string, carrierId: string, since: string): Promise<Array<Record<string, unknown>>>
+It fetches the shipment status updates that the carrier reported after since (an RFC 3339 time) and
+returns the list of updates (the "updates" array of the response). It runs as a nightly batch job
+with a time limit of 30 s: it must return or throw within 30 s. Throw a ShipmentUpdatesError if the
+updates cannot be fetched.
+API: GET {baseUrl}/v1/carriers/{carrierId}/shipment-updates?since={since}
+  200: JSON {updates: [{shipment_id, status, updated_at}], next_since}; updates are ordered by
+  updated_at, at most 100 per response; next_since is the updated_at of the last update. 400:
+  invalid since. 404: carrier not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

@@ -1,0 +1,12 @@
+# CheckRetries.java, lcr-run-java:dev (JDK 25.0.5, OkHttp 5.5.0, Apache HttpClient 5.6.5), --network none, 2026-11-20
+OkHttp 5.5.0 default, POST, fresh connection, server closes after the request, 1 address(es): error IOException after 0.1 s; requests received 1
+OkHttp 5.5.0 retryOnConnectionFailure(false), same, 1 address(es): error IOException after 0.0 s; requests received 1
+OkHttp 5.5.0 default, POST, fresh connection, server closes after the request, 2 address(es): error IOException after 0.0 s; requests received 2
+OkHttp 5.5.0 retryOnConnectionFailure(false), same, 2 address(es): error IOException after 0.0 s; requests received 1
+OkHttp 5.5.0 default, POST answered 408 then 200: status 200 after 0.0 s; requests received 2
+OkHttp 5.5.0 retryOnConnectionFailure(false), POST answered 408 then 200: status 408 after 0.0 s; requests received 1
+Apache HttpClient 5.6.5 default, POST answered 503 Retry-After: 30 then 200: status 200 after 30.0 s; requests received 2
+Apache HttpClient 5.6.5 cancel after 3 s, POST answered 503 Retry-After: 30 then 200: error IllegalStateException after 30.0 s; requests received 1
+Apache HttpClient 5.6.5 disableAutomaticRetries + cancel after 3 s, POST answered 503 Retry-After: 30 then 200: status 503 after 0.0 s; requests received 1
+Apache HttpClient 5.6.5 default, POST, no response (response timeout 1 s): error SocketTimeoutException after 1.0 s; requests received 1
+Apache HttpClient 5.6.5 default, GET, no response (response timeout 1 s): error SocketTimeoutException after 1.0 s; requests received 1

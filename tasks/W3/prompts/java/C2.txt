@@ -1,0 +1,16 @@
+Write a Java method in a public class DocumentClient:
+  public static Map<String, Object> uploadDocument(String baseUrl, String docId, String content) throws UploadException
+It uploads the text content as the document docId (UTF-8) and returns the document metadata from the
+response. Throw a UploadException if the document cannot be uploaded.
+API: PUT {baseUrl}/v1/documents/{docId}, body: the content (Content-Type: text/plain; charset=utf-8)
+  200: stored, JSON {id, size, sha256, version}; uploading to the same path replaces the document.
+  400: empty body.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

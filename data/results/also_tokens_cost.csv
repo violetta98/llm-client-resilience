@@ -1,0 +1,9 @@
+model,requests,prompt_tokens,completion_tokens,cost_usd,latency_median_s,providers
+claude-haiku-5.5,384,147948,2723194,0.69,,Anthropic 384
+claude-opus-5.5,384,147948,1633007,16.63,,Anthropic 384
+deepseek-v4.1-flash,384,110262,6196481,1.83,127.5,DeepInfra 384
+gemini-4-argon,384,120858,548709,2.86,,Google 384
+gpt-6.1-sol,384,99312,977054,4.98,,OpenAI 384
+granite-4.2-8b,384,109800,4908077,0.74,103.0,CoreWeave 384
+kimi-k3,384,129480,4058425,61.26,173.6,Moonshot AI 384
+qwen3-coder-next,384,107184,478424,0.4,16.7,Parasail 384

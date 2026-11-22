@@ -1,0 +1,39 @@
+{
+  "title": "Timeout and Retry Anti-Patterns in LLM-Generated Code: Benchmark and Analysis Code",
+  "upload_type": "software",
+  "version": "1.0.0",
+  "license": "apache-2.0",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Pidvolotska, Violetta",
+      "orcid": "0009-0001-8490-9574",
+      "affiliation": "Independent Researcher, Warsaw, Poland"
+    }
+  ],
+  "description": "A Go mock service that injects nine faults into HTTP exchanges (stalls at four points, transient 503s, 429 with Retry-After, a 30 s outage, refused connections, a reset after a write), the drivers that run Python, TypeScript, Java and Go solutions against it, and the scripts behind the tables of <i>A Timeout Is Not a Deadline: An Empirical Study of Timeout and Retry Anti-Patterns in LLM-Generated Code</i>. Preregistration: doi:10.5281/zenodo.24012023.",
+  "keywords": [
+    "empirical software engineering",
+    "AI for software engineering",
+    "software quality",
+    "software reliability",
+    "LLM-generated code",
+    "fault injection",
+    "HTTP clients",
+    "timeouts and retries",
+    "benchmark"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.24447083",
+      "relation": "isSupplementedBy",
+      "resource_type": "dataset",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.24012023",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ]
+}

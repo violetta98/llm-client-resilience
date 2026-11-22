@@ -1,0 +1,12 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function listAllOrders(baseUrl: string, customerId: string): Promise<Array<Record<string, unknown>>>
+It returns all orders of the customer, following the pagination until the last page. Throw a
+OrdersError if the orders cannot be listed.
+API: GET {baseUrl}/v1/customers/{customerId}/orders?cursor={cursor}
+  200: JSON {orders: [{id, created_at, total}], next_cursor}; up to 50 orders per page; omit cursor
+  for the first page; next_cursor is null on the last page. 404: customer not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

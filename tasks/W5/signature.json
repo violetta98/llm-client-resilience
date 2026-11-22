@@ -1,0 +1,98 @@
+{
+ "task": "W5",
+ "deps": [
+  "A"
+ ],
+ "status": "confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)",
+ "warmup_args": [
+  "{A}",
+  "cus-000",
+  "warm-up",
+  "warm-up"
+ ],
+ "single_args": [
+  "{A}",
+  "cus-042",
+  "Invoice shows the wrong address",
+  "The invoice for order ord-042 lists my old billing address."
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "cus-100",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-101",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-102",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-103",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-104",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-105",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-106",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-107",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-108",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ],
+  [
+   "{A}",
+   "cus-109",
+   "Invoice shows the wrong address",
+   "The invoice lists my old billing address."
+  ]
+ ],
+ "python": {
+  "function": "create_ticket",
+  "signature": "def create_ticket(base_url: str, customer_id: str, subject: str, message: str) -> dict"
+ },
+ "typescript": {
+  "function": "createTicket",
+  "signature": "export async function createTicket(baseUrl: string, customerId: string, subject: string, message: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "createTicket",
+  "signature": "public static Map<String, Object> createTicket(String baseUrl, String customerId, String subject, String message) throws TicketException",
+  "class": "SupportTicketClient"
+ },
+ "go": {
+  "function": "CreateTicket",
+  "signature": "func CreateTicket(baseURL, customerID, subject, message string) (map[string]any, error)"
+ }
+}

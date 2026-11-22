@@ -1,0 +1,74 @@
+{
+ "task": "R4",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "c-000"
+ ],
+ "single_args": [
+  "{A}",
+  "c-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "c-100"
+  ],
+  [
+   "{A}",
+   "c-101"
+  ],
+  [
+   "{A}",
+   "c-102"
+  ],
+  [
+   "{A}",
+   "c-103"
+  ],
+  [
+   "{A}",
+   "c-104"
+  ],
+  [
+   "{A}",
+   "c-105"
+  ],
+  [
+   "{A}",
+   "c-106"
+  ],
+  [
+   "{A}",
+   "c-107"
+  ],
+  [
+   "{A}",
+   "c-108"
+  ],
+  [
+   "{A}",
+   "c-109"
+  ]
+ ],
+ "python": {
+  "function": "list_all_orders",
+  "signature": "def list_all_orders(base_url: str, customer_id: str) -> list[dict]"
+ },
+ "typescript": {
+  "function": "listAllOrders",
+  "signature": "export async function listAllOrders(baseUrl: string, customerId: string): Promise<Array<Record<string, unknown>>>"
+ },
+ "java": {
+  "function": "listAllOrders",
+  "signature": "public static List<Map<String, Object>> listAllOrders(String baseUrl, String customerId) throws OrdersException",
+  "class": "OrderClient"
+ },
+ "go": {
+  "function": "ListAllOrders",
+  "signature": "func ListAllOrders(baseURL, customerID string) ([]map[string]any, error)"
+ }
+}

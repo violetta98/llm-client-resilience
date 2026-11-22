@@ -1,0 +1,98 @@
+{
+ "task": "R2",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "desk lamp",
+  "home",
+  50.0
+ ],
+ "single_args": [
+  "{A}",
+  "running shoes",
+  "sports",
+  120.0
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "trail shoes",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "road shoes",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "tennis shoes",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "hiking boots",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "rain jacket",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "wool socks",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "sports bag",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "water bottle",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "yoga mat",
+   "sports",
+   120.0
+  ],
+  [
+   "{A}",
+   "bike helmet",
+   "sports",
+   120.0
+  ]
+ ],
+ "python": {
+  "function": "search_products",
+  "signature": "def search_products(base_url: str, query: str, category: str, max_price: float) -> list[dict]"
+ },
+ "typescript": {
+  "function": "searchProducts",
+  "signature": "export async function searchProducts(baseUrl: string, query: string, category: string, maxPrice: number): Promise<Array<Record<string, unknown>>>"
+ },
+ "java": {
+  "function": "searchProducts",
+  "signature": "public static List<Map<String, Object>> searchProducts(String baseUrl, String query, String category, double maxPrice) throws SearchException",
+  "class": "ProductSearchClient"
+ },
+ "go": {
+  "function": "SearchProducts",
+  "signature": "func SearchProducts(baseURL, query, category string, maxPrice float64) ([]map[string]any, error)"
+ }
+}

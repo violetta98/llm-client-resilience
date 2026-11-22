@@ -1,0 +1,124 @@
+task: W5
+title: Create a support ticket; the API accepts Idempotency-Key
+group: write
+status: confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: helpdesk API
+    port: 9001
+fault_dependency: A
+faulted_request: POST /v1/tickets
+logical_call_key: customer_id (body)
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: true
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S8
+- S9
+correct_result:
+  value: the ticket object for cus-042 (status open)
+degraded_result: null
+effects_constraint: at most one ticket_created per customer_id; all attempts of one ticket carry the same Idempotency-Key
+  (or there is a single attempt)
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S8:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: At most one ticket; every retry reuses the same Idempotency-Key.
+args:
+  warmup:
+  - '{A}'
+  - cus-000
+  - warm-up
+  - warm-up
+  single:
+  - '{A}'
+  - cus-042
+  - Invoice shows the wrong address
+  - The invoice for order ord-042 lists my old billing address.
+  s7:
+  - - '{A}'
+    - cus-100
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-101
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-102
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-103
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-104
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-105
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-106
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-107
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-108
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+  - - '{A}'
+    - cus-109
+    - Invoice shows the wrong address
+    - The invoice lists my old billing address.
+unsafe_effect: ticket_created

@@ -1,0 +1,14 @@
+{
+ "main": {
+  "failing": 440,
+  "bandit_scope": 157,
+  "ruff_scope": 161,
+  "only_out_of_scope_clients": 269
+ },
+ "confirm": {
+  "failing": 114,
+  "bandit_scope": 40,
+  "ruff_scope": 40,
+  "only_out_of_scope_clients": 67
+ }
+}

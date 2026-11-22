@@ -1,0 +1,12 @@
+Write a Python function:
+  def download_report(base_url: str, report_id: str, dest_path: str) -> int
+It downloads the report file and saves it to dest_path, and returns the number of bytes written.
+Raise DownloadError if the report cannot be downloaded.
+API: GET {base_url}/v1/reports/{report_id}/download
+  200: the file (application/octet-stream, with Content-Length; reports are under 1 MB). 404: report
+  not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

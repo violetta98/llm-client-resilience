@@ -1,0 +1,9 @@
+outcome,cond,registered_pp,itt_pp,without_granite_qwen_pp
+s3_no_return,C0,-9.6,-24.8,-0.6
+s3_no_return,C2,-7.7,-28.3,0.0
+s4_no_return,C0,-14.3,-22.3,-4.0
+s4_no_return,C2,-29.4,-39.0,-14.9
+overrun,C0,-21.8,-29.8,-10.5
+overrun,C2,-28.8,-39.8,-11.0
+unsafe_write,C0,-6.3,-27.8,-2.0
+unsafe_write,C2,-10.7,-27.6,0.0

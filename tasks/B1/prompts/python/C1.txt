@@ -1,0 +1,13 @@
+Write a Python function:
+  def sync_records(base_url: str, records: list[dict]) -> int
+It writes every record to the records API (one PUT per record, in any order) and returns the number
+of records written. The function runs as a batch job with a time limit of 30 s: it must return or
+raise within 30 s. Raise SyncError if not all records can be written.
+API: PUT {base_url}/v1/records/{id}, JSON body: the record
+  200: stored, JSON {id, version}; writing the same record again replaces it. 400: invalid record.
+  The API allows 10 requests per second per client.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

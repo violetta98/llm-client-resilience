@@ -1,0 +1,755 @@
+task: B1
+title: Sync 20 records to a rate-limited API
+group: background
+status: frozen with protocol v1 (E6)
+time_limit_s: 30
+overrun_threshold_s: 30.25
+dependencies:
+  A:
+    name: records API
+    port: 9001
+fault_dependency: A
+faulted_request: the PUT of the fifth record (rec-*-05); S1, S2, S9 affect every request
+logical_call_key: record id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: true
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S8
+- S9
+correct_result:
+  value: 20
+  state: all 20 records stored
+degraded_result: null
+effects_constraint: if the function returned, all 20 records are stored
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - error
+  S8:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: All records, or an error, within 30 s; no record skipped silently.
+args:
+  warmup:
+  - '{A}'
+  - - id: rec-w00-01
+      name: Record 1
+      value: 10
+    - id: rec-w00-02
+      name: Record 2
+      value: 20
+    - id: rec-w00-03
+      name: Record 3
+      value: 30
+  single:
+  - '{A}'
+  - - id: rec-a42-01
+      name: Record 1
+      value: 10
+    - id: rec-a42-02
+      name: Record 2
+      value: 20
+    - id: rec-a42-03
+      name: Record 3
+      value: 30
+    - id: rec-a42-04
+      name: Record 4
+      value: 40
+    - id: rec-a42-05
+      name: Record 5
+      value: 50
+    - id: rec-a42-06
+      name: Record 6
+      value: 60
+    - id: rec-a42-07
+      name: Record 7
+      value: 70
+    - id: rec-a42-08
+      name: Record 8
+      value: 80
+    - id: rec-a42-09
+      name: Record 9
+      value: 90
+    - id: rec-a42-10
+      name: Record 10
+      value: 100
+    - id: rec-a42-11
+      name: Record 11
+      value: 110
+    - id: rec-a42-12
+      name: Record 12
+      value: 120
+    - id: rec-a42-13
+      name: Record 13
+      value: 130
+    - id: rec-a42-14
+      name: Record 14
+      value: 140
+    - id: rec-a42-15
+      name: Record 15
+      value: 150
+    - id: rec-a42-16
+      name: Record 16
+      value: 160
+    - id: rec-a42-17
+      name: Record 17
+      value: 170
+    - id: rec-a42-18
+      name: Record 18
+      value: 180
+    - id: rec-a42-19
+      name: Record 19
+      value: 190
+    - id: rec-a42-20
+      name: Record 20
+      value: 200
+  s7:
+  - - '{A}'
+    - - id: rec-b00-01
+        name: Record 1
+        value: 10
+      - id: rec-b00-02
+        name: Record 2
+        value: 20
+      - id: rec-b00-03
+        name: Record 3
+        value: 30
+      - id: rec-b00-04
+        name: Record 4
+        value: 40
+      - id: rec-b00-05
+        name: Record 5
+        value: 50
+      - id: rec-b00-06
+        name: Record 6
+        value: 60
+      - id: rec-b00-07
+        name: Record 7
+        value: 70
+      - id: rec-b00-08
+        name: Record 8
+        value: 80
+      - id: rec-b00-09
+        name: Record 9
+        value: 90
+      - id: rec-b00-10
+        name: Record 10
+        value: 100
+      - id: rec-b00-11
+        name: Record 11
+        value: 110
+      - id: rec-b00-12
+        name: Record 12
+        value: 120
+      - id: rec-b00-13
+        name: Record 13
+        value: 130
+      - id: rec-b00-14
+        name: Record 14
+        value: 140
+      - id: rec-b00-15
+        name: Record 15
+        value: 150
+      - id: rec-b00-16
+        name: Record 16
+        value: 160
+      - id: rec-b00-17
+        name: Record 17
+        value: 170
+      - id: rec-b00-18
+        name: Record 18
+        value: 180
+      - id: rec-b00-19
+        name: Record 19
+        value: 190
+      - id: rec-b00-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b01-01
+        name: Record 1
+        value: 10
+      - id: rec-b01-02
+        name: Record 2
+        value: 20
+      - id: rec-b01-03
+        name: Record 3
+        value: 30
+      - id: rec-b01-04
+        name: Record 4
+        value: 40
+      - id: rec-b01-05
+        name: Record 5
+        value: 50
+      - id: rec-b01-06
+        name: Record 6
+        value: 60
+      - id: rec-b01-07
+        name: Record 7
+        value: 70
+      - id: rec-b01-08
+        name: Record 8
+        value: 80
+      - id: rec-b01-09
+        name: Record 9
+        value: 90
+      - id: rec-b01-10
+        name: Record 10
+        value: 100
+      - id: rec-b01-11
+        name: Record 11
+        value: 110
+      - id: rec-b01-12
+        name: Record 12
+        value: 120
+      - id: rec-b01-13
+        name: Record 13
+        value: 130
+      - id: rec-b01-14
+        name: Record 14
+        value: 140
+      - id: rec-b01-15
+        name: Record 15
+        value: 150
+      - id: rec-b01-16
+        name: Record 16
+        value: 160
+      - id: rec-b01-17
+        name: Record 17
+        value: 170
+      - id: rec-b01-18
+        name: Record 18
+        value: 180
+      - id: rec-b01-19
+        name: Record 19
+        value: 190
+      - id: rec-b01-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b02-01
+        name: Record 1
+        value: 10
+      - id: rec-b02-02
+        name: Record 2
+        value: 20
+      - id: rec-b02-03
+        name: Record 3
+        value: 30
+      - id: rec-b02-04
+        name: Record 4
+        value: 40
+      - id: rec-b02-05
+        name: Record 5
+        value: 50
+      - id: rec-b02-06
+        name: Record 6
+        value: 60
+      - id: rec-b02-07
+        name: Record 7
+        value: 70
+      - id: rec-b02-08
+        name: Record 8
+        value: 80
+      - id: rec-b02-09
+        name: Record 9
+        value: 90
+      - id: rec-b02-10
+        name: Record 10
+        value: 100
+      - id: rec-b02-11
+        name: Record 11
+        value: 110
+      - id: rec-b02-12
+        name: Record 12
+        value: 120
+      - id: rec-b02-13
+        name: Record 13
+        value: 130
+      - id: rec-b02-14
+        name: Record 14
+        value: 140
+      - id: rec-b02-15
+        name: Record 15
+        value: 150
+      - id: rec-b02-16
+        name: Record 16
+        value: 160
+      - id: rec-b02-17
+        name: Record 17
+        value: 170
+      - id: rec-b02-18
+        name: Record 18
+        value: 180
+      - id: rec-b02-19
+        name: Record 19
+        value: 190
+      - id: rec-b02-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b03-01
+        name: Record 1
+        value: 10
+      - id: rec-b03-02
+        name: Record 2
+        value: 20
+      - id: rec-b03-03
+        name: Record 3
+        value: 30
+      - id: rec-b03-04
+        name: Record 4
+        value: 40
+      - id: rec-b03-05
+        name: Record 5
+        value: 50
+      - id: rec-b03-06
+        name: Record 6
+        value: 60
+      - id: rec-b03-07
+        name: Record 7
+        value: 70
+      - id: rec-b03-08
+        name: Record 8
+        value: 80
+      - id: rec-b03-09
+        name: Record 9
+        value: 90
+      - id: rec-b03-10
+        name: Record 10
+        value: 100
+      - id: rec-b03-11
+        name: Record 11
+        value: 110
+      - id: rec-b03-12
+        name: Record 12
+        value: 120
+      - id: rec-b03-13
+        name: Record 13
+        value: 130
+      - id: rec-b03-14
+        name: Record 14
+        value: 140
+      - id: rec-b03-15
+        name: Record 15
+        value: 150
+      - id: rec-b03-16
+        name: Record 16
+        value: 160
+      - id: rec-b03-17
+        name: Record 17
+        value: 170
+      - id: rec-b03-18
+        name: Record 18
+        value: 180
+      - id: rec-b03-19
+        name: Record 19
+        value: 190
+      - id: rec-b03-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b04-01
+        name: Record 1
+        value: 10
+      - id: rec-b04-02
+        name: Record 2
+        value: 20
+      - id: rec-b04-03
+        name: Record 3
+        value: 30
+      - id: rec-b04-04
+        name: Record 4
+        value: 40
+      - id: rec-b04-05
+        name: Record 5
+        value: 50
+      - id: rec-b04-06
+        name: Record 6
+        value: 60
+      - id: rec-b04-07
+        name: Record 7
+        value: 70
+      - id: rec-b04-08
+        name: Record 8
+        value: 80
+      - id: rec-b04-09
+        name: Record 9
+        value: 90
+      - id: rec-b04-10
+        name: Record 10
+        value: 100
+      - id: rec-b04-11
+        name: Record 11
+        value: 110
+      - id: rec-b04-12
+        name: Record 12
+        value: 120
+      - id: rec-b04-13
+        name: Record 13
+        value: 130
+      - id: rec-b04-14
+        name: Record 14
+        value: 140
+      - id: rec-b04-15
+        name: Record 15
+        value: 150
+      - id: rec-b04-16
+        name: Record 16
+        value: 160
+      - id: rec-b04-17
+        name: Record 17
+        value: 170
+      - id: rec-b04-18
+        name: Record 18
+        value: 180
+      - id: rec-b04-19
+        name: Record 19
+        value: 190
+      - id: rec-b04-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b05-01
+        name: Record 1
+        value: 10
+      - id: rec-b05-02
+        name: Record 2
+        value: 20
+      - id: rec-b05-03
+        name: Record 3
+        value: 30
+      - id: rec-b05-04
+        name: Record 4
+        value: 40
+      - id: rec-b05-05
+        name: Record 5
+        value: 50
+      - id: rec-b05-06
+        name: Record 6
+        value: 60
+      - id: rec-b05-07
+        name: Record 7
+        value: 70
+      - id: rec-b05-08
+        name: Record 8
+        value: 80
+      - id: rec-b05-09
+        name: Record 9
+        value: 90
+      - id: rec-b05-10
+        name: Record 10
+        value: 100
+      - id: rec-b05-11
+        name: Record 11
+        value: 110
+      - id: rec-b05-12
+        name: Record 12
+        value: 120
+      - id: rec-b05-13
+        name: Record 13
+        value: 130
+      - id: rec-b05-14
+        name: Record 14
+        value: 140
+      - id: rec-b05-15
+        name: Record 15
+        value: 150
+      - id: rec-b05-16
+        name: Record 16
+        value: 160
+      - id: rec-b05-17
+        name: Record 17
+        value: 170
+      - id: rec-b05-18
+        name: Record 18
+        value: 180
+      - id: rec-b05-19
+        name: Record 19
+        value: 190
+      - id: rec-b05-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b06-01
+        name: Record 1
+        value: 10
+      - id: rec-b06-02
+        name: Record 2
+        value: 20
+      - id: rec-b06-03
+        name: Record 3
+        value: 30
+      - id: rec-b06-04
+        name: Record 4
+        value: 40
+      - id: rec-b06-05
+        name: Record 5
+        value: 50
+      - id: rec-b06-06
+        name: Record 6
+        value: 60
+      - id: rec-b06-07
+        name: Record 7
+        value: 70
+      - id: rec-b06-08
+        name: Record 8
+        value: 80
+      - id: rec-b06-09
+        name: Record 9
+        value: 90
+      - id: rec-b06-10
+        name: Record 10
+        value: 100
+      - id: rec-b06-11
+        name: Record 11
+        value: 110
+      - id: rec-b06-12
+        name: Record 12
+        value: 120
+      - id: rec-b06-13
+        name: Record 13
+        value: 130
+      - id: rec-b06-14
+        name: Record 14
+        value: 140
+      - id: rec-b06-15
+        name: Record 15
+        value: 150
+      - id: rec-b06-16
+        name: Record 16
+        value: 160
+      - id: rec-b06-17
+        name: Record 17
+        value: 170
+      - id: rec-b06-18
+        name: Record 18
+        value: 180
+      - id: rec-b06-19
+        name: Record 19
+        value: 190
+      - id: rec-b06-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b07-01
+        name: Record 1
+        value: 10
+      - id: rec-b07-02
+        name: Record 2
+        value: 20
+      - id: rec-b07-03
+        name: Record 3
+        value: 30
+      - id: rec-b07-04
+        name: Record 4
+        value: 40
+      - id: rec-b07-05
+        name: Record 5
+        value: 50
+      - id: rec-b07-06
+        name: Record 6
+        value: 60
+      - id: rec-b07-07
+        name: Record 7
+        value: 70
+      - id: rec-b07-08
+        name: Record 8
+        value: 80
+      - id: rec-b07-09
+        name: Record 9
+        value: 90
+      - id: rec-b07-10
+        name: Record 10
+        value: 100
+      - id: rec-b07-11
+        name: Record 11
+        value: 110
+      - id: rec-b07-12
+        name: Record 12
+        value: 120
+      - id: rec-b07-13
+        name: Record 13
+        value: 130
+      - id: rec-b07-14
+        name: Record 14
+        value: 140
+      - id: rec-b07-15
+        name: Record 15
+        value: 150
+      - id: rec-b07-16
+        name: Record 16
+        value: 160
+      - id: rec-b07-17
+        name: Record 17
+        value: 170
+      - id: rec-b07-18
+        name: Record 18
+        value: 180
+      - id: rec-b07-19
+        name: Record 19
+        value: 190
+      - id: rec-b07-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b08-01
+        name: Record 1
+        value: 10
+      - id: rec-b08-02
+        name: Record 2
+        value: 20
+      - id: rec-b08-03
+        name: Record 3
+        value: 30
+      - id: rec-b08-04
+        name: Record 4
+        value: 40
+      - id: rec-b08-05
+        name: Record 5
+        value: 50
+      - id: rec-b08-06
+        name: Record 6
+        value: 60
+      - id: rec-b08-07
+        name: Record 7
+        value: 70
+      - id: rec-b08-08
+        name: Record 8
+        value: 80
+      - id: rec-b08-09
+        name: Record 9
+        value: 90
+      - id: rec-b08-10
+        name: Record 10
+        value: 100
+      - id: rec-b08-11
+        name: Record 11
+        value: 110
+      - id: rec-b08-12
+        name: Record 12
+        value: 120
+      - id: rec-b08-13
+        name: Record 13
+        value: 130
+      - id: rec-b08-14
+        name: Record 14
+        value: 140
+      - id: rec-b08-15
+        name: Record 15
+        value: 150
+      - id: rec-b08-16
+        name: Record 16
+        value: 160
+      - id: rec-b08-17
+        name: Record 17
+        value: 170
+      - id: rec-b08-18
+        name: Record 18
+        value: 180
+      - id: rec-b08-19
+        name: Record 19
+        value: 190
+      - id: rec-b08-20
+        name: Record 20
+        value: 200
+  - - '{A}'
+    - - id: rec-b09-01
+        name: Record 1
+        value: 10
+      - id: rec-b09-02
+        name: Record 2
+        value: 20
+      - id: rec-b09-03
+        name: Record 3
+        value: 30
+      - id: rec-b09-04
+        name: Record 4
+        value: 40
+      - id: rec-b09-05
+        name: Record 5
+        value: 50
+      - id: rec-b09-06
+        name: Record 6
+        value: 60
+      - id: rec-b09-07
+        name: Record 7
+        value: 70
+      - id: rec-b09-08
+        name: Record 8
+        value: 80
+      - id: rec-b09-09
+        name: Record 9
+        value: 90
+      - id: rec-b09-10
+        name: Record 10
+        value: 100
+      - id: rec-b09-11
+        name: Record 11
+        value: 110
+      - id: rec-b09-12
+        name: Record 12
+        value: 120
+      - id: rec-b09-13
+        name: Record 13
+        value: 130
+      - id: rec-b09-14
+        name: Record 14
+        value: 140
+      - id: rec-b09-15
+        name: Record 15
+        value: 150
+      - id: rec-b09-16
+        name: Record 16
+        value: 160
+      - id: rec-b09-17
+        name: Record 17
+        value: 170
+      - id: rec-b09-18
+        name: Record 18
+        value: 180
+      - id: rec-b09-19
+        name: Record 19
+        value: 190
+      - id: rec-b09-20
+        name: Record 20
+        value: 200

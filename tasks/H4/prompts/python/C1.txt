@@ -1,0 +1,13 @@
+Write a Python function:
+  def get_notification_preferences(preferences_url: str, user_id: str) -> dict
+It returns the user's notification preferences {"email": <bool>, "sms": <bool>, "push": <bool>} for
+the settings page. It runs inside a web request handler and must return within 2 s. If the
+preferences cannot be obtained in time, it returns the documented default {"email": true, "sms":
+false, "push": false}.
+API (preference service): GET {preferences_url}/v1/users/{user_id}/notification-preferences
+  200: JSON {user_id, email, sms, push, updated_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

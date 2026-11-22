@@ -1,0 +1,86 @@
+{
+ "task": "P1",
+ "deps": [
+  "A"
+ ],
+ "status": "PILOT task (outside the benchmark; brief E5)",
+ "warmup_args": [
+  "{A}",
+  "EUR",
+  "PLN"
+ ],
+ "single_args": [
+  "{A}",
+  "EUR",
+  "USD"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "USD",
+   "JPY"
+  ],
+  [
+   "{A}",
+   "USD",
+   "GBP"
+  ],
+  [
+   "{A}",
+   "USD",
+   "CHF"
+  ],
+  [
+   "{A}",
+   "USD",
+   "SEK"
+  ],
+  [
+   "{A}",
+   "USD",
+   "NOK"
+  ],
+  [
+   "{A}",
+   "USD",
+   "DKK"
+  ],
+  [
+   "{A}",
+   "USD",
+   "CZK"
+  ],
+  [
+   "{A}",
+   "USD",
+   "HUF"
+  ],
+  [
+   "{A}",
+   "USD",
+   "CAD"
+  ],
+  [
+   "{A}",
+   "USD",
+   "AUD"
+  ]
+ ],
+ "python": {
+  "function": "get_exchange_rate",
+  "signature": "def get_exchange_rate(base_url: str, base_currency: str, quote_currency: str) -> dict"
+ },
+ "typescript": {
+  "function": "getExchangeRate",
+  "signature": "export async function getExchangeRate(baseUrl: string, baseCurrency: string, quoteCurrency: string): Promise<Record<string, unknown>>"
+ },
+ "java": {
+  "function": "getExchangeRate",
+  "signature": "public static Map<String, Object> getExchangeRate(String baseUrl, String baseCurrency, String quoteCurrency) throws RateException",
+  "class": "ExchangeRateClient"
+ },
+ "go": {
+  "function": "GetExchangeRate",
+  "signature": "func GetExchangeRate(baseURL, baseCurrency, quoteCurrency string) (map[string]any, error)"
+ }
+}

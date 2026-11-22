@@ -1,0 +1,62 @@
+{
+ "task": "H2",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}/instances/db-00"
+ ],
+ "single_args": [
+  "{A}/instances/db-42"
+ ],
+ "s7_args": [
+  [
+   "{A}/instances/db-10"
+  ],
+  [
+   "{A}/instances/db-11"
+  ],
+  [
+   "{A}/instances/db-12"
+  ],
+  [
+   "{A}/instances/db-13"
+  ],
+  [
+   "{A}/instances/db-14"
+  ],
+  [
+   "{A}/instances/db-15"
+  ],
+  [
+   "{A}/instances/db-16"
+  ],
+  [
+   "{A}/instances/db-17"
+  ],
+  [
+   "{A}/instances/db-18"
+  ],
+  [
+   "{A}/instances/db-19"
+  ]
+ ],
+ "python": {
+  "function": "is_dependency_ready",
+  "signature": "def is_dependency_ready(dependency_url: str) -> bool"
+ },
+ "typescript": {
+  "function": "isDependencyReady",
+  "signature": "export async function isDependencyReady(dependencyUrl: string): Promise<boolean>"
+ },
+ "java": {
+  "function": "isDependencyReady",
+  "signature": "public static boolean isDependencyReady(String dependencyUrl)",
+  "class": "ReadinessCheck"
+ },
+ "go": {
+  "function": "IsDependencyReady",
+  "signature": "func IsDependencyReady(dependencyURL string) bool"
+ }
+}

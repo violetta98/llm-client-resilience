@@ -1,0 +1,4 @@
+"outcome","step","ok","n","events","warnings"
+"s3_no_return","full",TRUE,2566,78,""
+"overrun","full",TRUE,1133,220,""
+"unsafe_write","task fixed (protocol)",FALSE,475,14,"Model convergence problem; singular convergence (7). See vignette('troubleshooting'), help('diagnose')"

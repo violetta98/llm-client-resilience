@@ -1,0 +1,63 @@
+lang,model,cond,n,libraries,timeout_explicit,timeout_total,retry_none,retry_hand_loop,retry_retry_library,retry_library_builtin
+python,claude-opus-5.5,C0,48,requests 39; httpx 8; requests;urllib3 1,48,48,3,45,0,1
+python,claude-opus-5.5,C2,48,requests 31; httpx 11; requests;urllib3 3; aiohttp 2; http.client 1,47,47,0,48,0,3
+python,gpt-6.1-sol,C0,48,requests 39; httpx 7; aiohttp 2,48,48,12,36,0,2
+python,gpt-6.1-sol,C2,48,requests 34; httpx 9; aiohttp 4; requests;urllib3 1,48,48,1,46,0,23
+python,gemini-4-argon,C0,46,httpx 22; requests 16; requests;urllib3 8,46,46,0,35,3,8
+python,gemini-4-argon,C2,47,httpx 39; requests 7; httpx;urllib.request 1,47,47,0,47,0,0
+python,claude-haiku-5.5,C0,48,requests 40; httpx 8,48,48,4,44,0,0
+python,claude-haiku-5.5,C2,48,httpx 24; requests 20; requests;urllib3 3; urllib.request 1,48,48,1,47,0,3
+python,deepseek-v4.1-flash,C0,48,requests 39; httpx 6; aiohttp 2; urllib3 1,48,48,4,44,0,1
+python,deepseek-v4.1-flash,C2,48,requests 29; httpx 8; urllib3 7; aiohttp 3; requests;urllib3 1,48,48,0,48,0,8
+python,kimi-k3,C0,48,requests 42; httpx 5; requests;urllib3 1,48,48,3,41,3,2
+python,kimi-k3,C2,47,requests 41; httpx 4; http.client;requests;urllib3 1; urllib3 1,47,47,0,46,0,2
+python,qwen3-coder-next,C0,47,requests 29; httpx 11; requests;urllib3 6; httpx;requests 1,46,46,11,8,27,7
+python,qwen3-coder-next,C2,42,requests 30; requests;urllib3 5; httpx;requests 2; httpx 1; httpx;requests;urllib3 1; httpx;urllib3 1; http.client;requests 1; http.client;requests;urllib3 1,41,41,1,21,20,10
+python,granite-4.2-8b,C0,46,requests 29; httpx 15; aiohttp 2,44,44,5,40,1,0
+python,granite-4.2-8b,C2,42,httpx 23; requests 17; aiohttp 2,42,42,0,41,1,0
+typescript,claude-opus-5.5,C0,48,fetch 48,48,48,3,45,0,0
+typescript,claude-opus-5.5,C2,48,fetch 48,48,48,0,48,0,0
+typescript,gpt-6.1-sol,C0,48,fetch 48,45,45,6,42,0,0
+typescript,gpt-6.1-sol,C2,48,fetch 48,47,47,0,48,0,0
+typescript,gemini-4-argon,C0,48,fetch 25; ky 13; got 10,46,46,2,21,2,23
+typescript,gemini-4-argon,C2,48,fetch 47; got 1,48,48,0,47,0,1
+typescript,claude-haiku-5.5,C0,48,fetch 48,47,47,7,41,0,0
+typescript,claude-haiku-5.5,C2,48,fetch 48,48,48,1,47,0,0
+typescript,deepseek-v4.1-flash,C0,48,fetch 48,48,48,4,44,0,0
+typescript,deepseek-v4.1-flash,C2,48,fetch 46; fetch;node:http 2,46,46,1,47,0,0
+typescript,kimi-k3,C0,48,fetch 48,48,48,3,44,1,0
+typescript,kimi-k3,C2,48,fetch 48,48,48,1,47,0,0
+typescript,qwen3-coder-next,C0,19,fetch 13; ky 6,13,13,5,5,7,5
+typescript,qwen3-coder-next,C2,20,ky 10; fetch 9; axios;node:http 1,18,18,2,4,11,5
+typescript,granite-4.2-8b,C0,37,fetch 37,14,14,6,26,5,0
+typescript,granite-4.2-8b,C2,32,fetch 32,13,13,2,29,1,0
+java,claude-opus-5.5,C0,30,java.net.http 30,30,30,4,26,0,0
+java,claude-opus-5.5,C2,48,java.net.http 48,48,48,0,48,0,0
+java,gpt-6.1-sol,C0,48,java.net.http 46; apache-httpclient5 2,48,48,9,39,0,0
+java,gpt-6.1-sol,C2,48,java.net.http 45; apache-httpclient5 3,48,48,2,46,0,0
+java,gemini-4-argon,C0,44,java.net.http 44,44,44,6,38,0,0
+java,gemini-4-argon,C2,40,java.net.http 40,40,40,3,37,0,0
+java,claude-haiku-5.5,C0,30,java.net.http 30,30,30,4,26,0,0
+java,claude-haiku-5.5,C2,32,java.net.http 31; HttpURLConnection;java.net.http 1,32,32,0,32,0,0
+java,deepseek-v4.1-flash,C0,39,java.net.http 39,39,39,7,32,0,0
+java,deepseek-v4.1-flash,C2,45,java.net.http 45,45,45,0,45,0,0
+java,kimi-k3,C0,41,java.net.http 41,41,41,8,33,0,0
+java,kimi-k3,C2,36,java.net.http 36,36,36,0,36,0,0
+java,qwen3-coder-next,C0,26,java.net.http 22; okhttp 4,26,26,21,5,0,0
+java,qwen3-coder-next,C2,14,java.net.http 7; okhttp 4; java.net.http;okhttp 3,14,14,0,14,0,0
+go,claude-opus-5.5,C0,47,net/http 47,47,47,3,44,0,0
+go,claude-opus-5.5,C2,47,net/http 47,47,47,0,47,0,0
+go,gpt-6.1-sol,C0,46,net/http 46,46,46,11,35,0,0
+go,gpt-6.1-sol,C2,46,net/http 46,46,46,4,42,0,0
+go,gemini-4-argon,C0,48,go-retryablehttp;net/http 23; net/http 17; resty 7; go-retryablehttp 1,43,42,9,14,24,1
+go,gemini-4-argon,C2,47,net/http 45; go-retryablehttp;net/http 2,47,47,0,45,2,0
+go,claude-haiku-5.5,C0,44,net/http 44,44,44,5,39,0,0
+go,claude-haiku-5.5,C2,46,net/http 46,46,46,0,46,0,0
+go,deepseek-v4.1-flash,C0,48,net/http 47; go-retryablehttp;net/http 1,48,48,2,45,1,0
+go,deepseek-v4.1-flash,C2,47,net/http 47,47,47,0,47,0,0
+go,kimi-k3,C0,47,net/http 28; go-retryablehttp;net/http 19,47,47,4,24,19,0
+go,kimi-k3,C2,48,net/http 39; go-retryablehttp;net/http 9,48,48,0,39,12,0
+go,qwen3-coder-next,C0,2,resty 1; go-retryablehttp;net/http;resty 1,1,1,1,1,1,0
+go,qwen3-coder-next,C2,3,go-retryablehttp;net/http 2; go-retryablehttp;net/http;resty 1,3,3,0,0,3,0
+go,granite-4.2-8b,C0,8,net/http 8,5,5,1,7,0,0
+go,granite-4.2-8b,C2,3,net/http 3,1,1,0,3,0,0

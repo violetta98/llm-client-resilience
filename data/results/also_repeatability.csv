@@ -1,0 +1,10 @@
+measure,pairs,agree,percent,kappa,positives_main,positives_rep
+outcome,1550,1527,98.52,0.978,0,0
+no_return_90,1550,1549,99.94,0.987,41,40
+overrun,814,812,99.75,0.964,29,29
+rapid_retries,1526,1513,99.15,0.514,11,16
+retry_after_violation,272,265,97.43,0.874,30,33
+excessive_retries,264,258,97.73,0.913,41,41
+unsafe_write_retry,28,28,100.0,,0,0
+sync_retries,136,117,86.03,0.656,37,40
+any_harmful_retry,1550,1513,97.61,0.832,113,126

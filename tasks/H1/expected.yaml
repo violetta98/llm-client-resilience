@@ -1,0 +1,109 @@
+task: H1
+title: Show a profile with recommendations; omit recommendations if slow
+group: handler
+status: frozen with protocol v1 (E6)
+time_limit_s: 2
+overrun_threshold_s: 2.25
+dependencies:
+  A:
+    name: profile service
+    port: 9001
+  B:
+    name: recommendation service
+    port: 9002
+fault_dependency: B
+faulted_request: the recommendations request
+logical_call_key: user_id (recommendations)
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: profile of u-042 and its 3 recommendations
+degraded_result:
+  value: profile of u-042 with recommendations null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: The profile without recommendations within 2 s.
+args:
+  warmup:
+  - '{A}'
+  - '{B}'
+  - u-000
+  single:
+  - '{A}'
+  - '{B}'
+  - u-042
+  s7:
+  - - '{A}'
+    - '{B}'
+    - u-100
+  - - '{A}'
+    - '{B}'
+    - u-101
+  - - '{A}'
+    - '{B}'
+    - u-102
+  - - '{A}'
+    - '{B}'
+    - u-103
+  - - '{A}'
+    - '{B}'
+    - u-104
+  - - '{A}'
+    - '{B}'
+    - u-105
+  - - '{A}'
+    - '{B}'
+    - u-106
+  - - '{A}'
+    - '{B}'
+    - u-107
+  - - '{A}'
+    - '{B}'
+    - u-108
+  - - '{A}'
+    - '{B}'
+    - u-109

@@ -1,0 +1,10 @@
+Write a Java method in a public class UserProfileClient:
+  public static Map<String, Object> getUserProfile(String baseUrl, String userId) throws ProfileException
+It fetches the profile of the user with the given ID from the user service and returns the profile
+object from the response. Throw a ProfileException if the profile cannot be fetched.
+API: GET {baseUrl}/v1/users/{userId}
+  200: the profile, JSON {id, name, email, created_at}. 404: user not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+Respond with the complete code in a single code block.

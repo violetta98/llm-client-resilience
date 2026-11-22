@@ -1,0 +1,23 @@
+// D56: does the caller's context end the Go advice functions before their own 10 s deadline? Local server that reads
+// the request and never answers; the caller's context ends after 1 s. Built together with one advice file.
+package main
+
+import (
+	"context"
+	"fmt"
+	"net"
+	"net/http"
+	"os"
+	"time"
+)
+
+func main() {
+	ln, _ := net.Listen("tcp", "127.0.0.1:0")
+	go http.Serve(ln, http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) { <-r.Context().Done() }))
+	base := "http://" + ln.Addr().String()
+	ctx, cancel := context.WithTimeout(context.Background(), time.Second)
+	defer cancel()
+	t0 := time.Now()
+	_, err := call(ctx, base)
+	fmt.Printf("%s, caller context ends after 1 s: error=%v after %.1f s\n", os.Args[1], err != nil, time.Since(t0).Seconds())
+}

@@ -1,0 +1,86 @@
+{
+ "task": "P2",
+ "deps": [
+  "A"
+ ],
+ "status": "PILOT task (outside the benchmark; brief E5)",
+ "warmup_args": [
+  "{A}",
+  "t-000",
+  "warm-up"
+ ],
+ "single_args": [
+  "{A}",
+  "t-042",
+  "The replacement part was shipped today."
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "t-100",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-101",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-102",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-103",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-104",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-105",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-106",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-107",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-108",
+   "The replacement part was shipped today."
+  ],
+  [
+   "{A}",
+   "t-109",
+   "The replacement part was shipped today."
+  ]
+ ],
+ "python": {
+  "function": "add_ticket_comment",
+  "signature": "def add_ticket_comment(base_url: str, ticket_id: str, text: str) -> str"
+ },
+ "typescript": {
+  "function": "addTicketComment",
+  "signature": "export async function addTicketComment(baseUrl: string, ticketId: string, text: string): Promise<string>"
+ },
+ "java": {
+  "function": "addTicketComment",
+  "signature": "public static String addTicketComment(String baseUrl, String ticketId, String text) throws CommentException",
+  "class": "TicketClient"
+ },
+ "go": {
+  "function": "AddTicketComment",
+  "signature": "func AddTicketComment(baseURL, ticketID, text string) (string, error)"
+ }
+}

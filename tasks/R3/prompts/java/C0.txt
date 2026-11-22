@@ -1,0 +1,11 @@
+Write a Java method in a public class ReportDownloader:
+  public static int downloadReport(String baseUrl, String reportId, String destPath) throws DownloadException
+It downloads the report file and saves it to destPath, and returns the number of bytes written.
+Throw a DownloadException if the report cannot be downloaded.
+API: GET {baseUrl}/v1/reports/{reportId}/download
+  200: the file (application/octet-stream, with Content-Length; reports are under 1 MB). 404: report
+  not found.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Java 25 standard library (java.net.http.HttpClient), OkHttp, Apache HttpClient 5, Resilience4j, Jackson, Gson.
+Respond with the complete code in a single code block.

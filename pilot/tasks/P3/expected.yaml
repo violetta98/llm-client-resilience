@@ -1,0 +1,94 @@
+task: P3
+title: Show a delivery estimate; return the documented default if unavailable
+group: handler
+status: PILOT task (outside the benchmark; brief E5)
+time_limit_s: 2
+overrun_threshold_s: 2.25
+dependencies:
+  A:
+    name: shipping service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/estimates (the only request)
+logical_call_key: postal_code
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: 2
+degraded_result:
+  value: 5
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: The default (5) within 2 s.
+args:
+  warmup:
+  - '{A}'
+  - 00-000
+  single:
+  - '{A}'
+  - 30-042
+  s7:
+  - - '{A}'
+    - 30-100
+  - - '{A}'
+    - 30-101
+  - - '{A}'
+    - 30-102
+  - - '{A}'
+    - 30-103
+  - - '{A}'
+    - 30-104
+  - - '{A}'
+    - 30-105
+  - - '{A}'
+    - 30-106
+  - - '{A}'
+    - 30-107
+  - - '{A}'
+    - 30-108
+  - - '{A}'
+    - 30-109

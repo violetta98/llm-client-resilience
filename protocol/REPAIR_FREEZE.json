@@ -1,0 +1,28 @@
+{
+ "frozen_utc": "2026-11-14T22:16:58+00:00",
+ "files": {
+  "protocol/REPAIR_ADDENDUM.md": "4f03d4fd3057343c2eda8e20204f1b4377cac784f74facf025b79030acd5de7e",
+  "gen/repair_prompts.py": "9290f8b1d058d607de484bfb6bd1b36f5a783d7e7b4ec4b36dc80f0b6601dec7",
+  "gen/config/repair.json": "2cedf83f337bf67c9dc017a69ce75bf22b244c5c66f10aacf3df43744b76982f",
+  "gen/generate.py": "23443972e6ef2f8351fae48321f1e20d16ddfe3e7d7fea4d14291cff337fe21d",
+  "gen/batch.py": "78fc4319820cfec836f59d450b5a23881199c8a14d97af115ea04886f53ebe7b",
+  "data/repair/prompts/selection.csv": "855189a7a91e116270088c5e11e1225eafa14f14ee591b2c1f1242dbb21d5886"
+ },
+ "prompts": {
+  "count": 661,
+  "sha256_of_all": "c0b2849d474c06a2ca91f9660c781889e4604045942294f99c0d47fa5b27aeba"
+ },
+ "note": "Experiment B frozen locally before any repair request was sent (author's decision 2026-11-14).",
+ "arm_R1": {
+  "frozen_utc": "2026-11-14T23:38:33+00:00",
+  "files": {
+   "gen/repair_prompts.py": "603f61e789aea51f2dc9802216df9232006e6bf36a00e0a84f89f788931c6812",
+   "gen/config/repair_r1.json": "7461e40d4bab3d4b6f0688a57021aa544c9689b24789a8cef3ca2cdfb5c8fa90"
+  },
+  "prompts": {
+   "count": 661,
+   "sha256_of_all": "051842d26248c0cd5fa5a279e4a725f9d5b83c07a3f3130d9982fe7f2987012c"
+  },
+  "note": "Arm R1 (DEVIATIONS D39) added in review, frozen before any R1 request was sent; R0 requests had already been sent."
+ }
+}

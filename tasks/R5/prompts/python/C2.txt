@@ -1,0 +1,15 @@
+Write a Python function:
+  def is_feature_enabled(base_url: str, flag_key: str) -> bool
+It returns whether the feature flag is enabled. If the flag service fails or cannot be reached, it
+returns False, the documented default for every flag.
+API: GET {base_url}/v1/flags/{flag_key}
+  200: JSON {key, enabled}. 404: unknown flag.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Python 3.13 standard library, requests, httpx, aiohttp, urllib3, tenacity, backoff.
+Requirements:
+- Every call of the function finishes within the stated time limit, or within 10 s if none is stated.
+- Transient failures are retried with capped exponential backoff and jitter.
+- Retry-After is respected.
+- A request that may already have been processed is repeated only if it is idempotent (GET, PUT, DELETE) or carries an idempotency key; 429, 503 and a refused connection mean it was not processed.
+Respond with the complete code in a single code block.

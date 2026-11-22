@@ -1,0 +1,50 @@
+id,group,case,verdict
+H1-01,H1,C0 · deepseek-v4.1-flash · W5 · typescript · 3,label wrong
+H1-02,H1,C0 · granite-4.2-8b · H4 · typescript · 1,label wrong
+H1-03,H1,C0 · granite-4.2-8b · H4 · typescript · 2,label wrong
+H1-04,H1,C2 · kimi-k3 · R6 · typescript · 2,label wrong
+H1-05,H1,C2 · qwen3-coder-next · B5 · typescript · 1,label wrong
+H1-06,H1,C2 · qwen3-coder-next · B5 · typescript · 3,label wrong
+H1-07,H1,C0 · claude-opus-5.5 · H4 · python · 3,label right
+H1-08,H1,C0 · gpt-6.1-sol · H4 · python · 1,label wrong
+H1-09,H1,C0 · kimi-k3 · H4 · python · 1,label right
+H1-10,H1,C0 · qwen3-coder-next · H4 · python · 2,label right
+H1-11,H1,C0 · qwen3-coder-next · R6 · python · 2,label right
+H1-12,H1,C2 · claude-opus-5.5 · B5 · python · 2,label wrong
+H1-13,H1,C2 · gemini-4-argon · H4 · python · 2,label right
+H1-14,H1,C2 · granite-4.2-8b · W5 · python · 3,label right
+FX-15,FX,C0 · claude-haiku-5.5 · W3 · python · 2,generic / real
+FX-16,FX,C0 · gemini-4-argon · W1 · java · 3,generic / real
+FX-17,FX,C0 · claude-haiku-5.5 · W2 · python · 1,generic / real
+FX-18,FX,C0 · deepseek-v4.1-flash · W1 · python · 3,unsure
+FX-19,FX,C0 · gemini-4-argon · W2 · python · 3,generic / real
+FX-20,FX,C0 · claude-haiku-5.5 · R1 · python · 2,generic / real
+FX-21,FX,C0 · qwen3-coder-next · B1 · python · 1,unsure
+FX-22,FX,C0 · qwen3-coder-next · R5 · typescript · 1,generic / real
+FX-23,FX,C0 · gpt-6.1-sol · R1 · python · 2,generic / real
+FX-24,FX,C0 · gpt-6.1-sol · B2 · go · 1,generic / real
+FX-25,FX,C0 · gemini-4-argon · B3 · go · 3,generic / real
+FX-26,FX,C0 · claude-haiku-5.5 · W4 · java · 3,generic / real
+FX-27,FX,C0 · claude-haiku-5.5 · H1 · typescript · 3,generic / real
+FX-28,FX,C0 · gemini-4-argon · H3 · java · 2,unsure
+FX-29,FX,C0 · granite-4.2-8b · W1 · python · 3,generic / real
+FX-30,FX,C0 · claude-opus-5.5 · R5 · python · 3,unsure
+SL-31,SL,C0 · claude-haiku-5.5 · R5 · java · 2,too short timeout (claim right)
+SL-32,SL,C0 · claude-haiku-5.5 · R5 · java · 3,too short timeout (claim right)
+SL-33,SL,C0 · gemini-4-argon · W2 · java · 2,unsure
+SL-34,SL,C0 · qwen3-coder-next · R5 · java · 3,too short timeout (claim right)
+SL-35,SL,C0 · granite-4.2-8b · H2 · go · 2,too short timeout (claim right)
+SL-36,SL,C2 · claude-opus-5.5 · H1 · java · 1,measure wrong
+SL-37,SL,C2 · claude-opus-5.5 · H2 · java · 3,legitimate fallback
+SL-38,SL,C0 · claude-haiku-5.5 · H2 · java · 1,legitimate fallback
+XR-39,XR,C2 · deepseek-v4.1-flash · B5 · java · 3,measure right
+XR-40,XR,C2 · deepseek-v4.1-flash · W5 · typescript · 1,measure right
+XR-41,XR,C2 · gpt-6.1-sol · W5 · python · 3,measure right
+XR-42,XR,C2 · gemini-4-argon · W5 · python · 1,measure right
+XR-43,XR,C2 · gemini-4-argon · B5 · typescript · 1,measure right
+XR-44,XR,C2 · gemini-4-argon · B5 · python · 3,measure right
+LN-45,LN,bandit_B113 · C0 · deepseek-v4.1-flash · B5 · python · 1,false alarm
+LN-46,LN,bandit_B113 · C0 · deepseek-v4.1-flash · B5 · python · 2,false alarm
+LN-47,LN,bandit_B113 · C0 · granite-4.2-8b · W5 · python · 1,flag right
+LN-48,LN,bandit_B113 · C2 · kimi-k3 · R6 · python · 2,false alarm
+LN-49,LN,ruff_S113 · C0 · granite-4.2-8b · W5 · python · 1,flag right

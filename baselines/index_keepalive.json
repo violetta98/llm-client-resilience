@@ -1,0 +1,100 @@
+[
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-aiohttp-post-keepalive",
+  "path": "baselines/aiohttp/post_keepalive.py",
+  "library": "aiohttp"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-apache-httpclient5-post-keepalive",
+  "path": "baselines/apache-httpclient5/post_keepalive.java",
+  "library": "apache-httpclient5"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-axios-post-keepalive",
+  "path": "baselines/axios/post_keepalive.ts",
+  "library": "axios"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-fetch-post-keepalive",
+  "path": "baselines/fetch/post_keepalive.ts",
+  "library": "fetch"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-go-retryablehttp-post-keepalive",
+  "path": "baselines/go-retryablehttp/post_keepalive.go",
+  "library": "go-retryablehttp"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-got-post-keepalive",
+  "path": "baselines/got/post_keepalive.ts",
+  "library": "got"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-httpx-post-keepalive",
+  "path": "baselines/httpx/post_keepalive.py",
+  "library": "httpx"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-java.net.http-post-keepalive",
+  "path": "baselines/java.net.http/post_keepalive.java",
+  "library": "java.net.http"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-ky-post-keepalive",
+  "path": "baselines/ky/post_keepalive.ts",
+  "library": "ky"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-net-http-post-keepalive",
+  "path": "baselines/net-http/post_keepalive.go",
+  "library": "net-http"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-okhttp-post-keepalive",
+  "path": "baselines/okhttp/post_keepalive.java",
+  "library": "okhttp"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-requests-post-keepalive",
+  "path": "baselines/requests/post_keepalive.py",
+  "library": "requests"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-resty-post-keepalive",
+  "path": "baselines/resty/post_keepalive.go",
+  "library": "resty"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-urllib3-post-keepalive",
+  "path": "baselines/urllib3/post_keepalive.py",
+  "library": "urllib3"
+ }
+]

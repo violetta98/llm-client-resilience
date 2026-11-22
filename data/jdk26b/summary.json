@@ -1,0 +1,43 @@
+{
+ "heldout_S4": {
+  "C0": {
+   "n": 65,
+   "hang_jdk25": 45,
+   "hang_jdk26": 0
+  },
+  "C2": {
+   "n": 61,
+   "hang_jdk25": 25,
+   "hang_jdk26": 1
+  }
+ },
+ "heldout_returned": {
+  "n": 69,
+  "after_10.25s": 31,
+  "max_s": 30.3,
+  "outcomes": {
+   "degraded": 9,
+   "error": 60
+  }
+ },
+ "repair_java": {
+  "R0": {
+   "failing_jdk25": 200,
+   "fixed_jdk25": 172,
+   "failing_jdk26": 70,
+   "fixed_jdk26": 53,
+   "revisions_with_S4": 186,
+   "rev_hang_jdk25": 1,
+   "rev_hang_jdk26": 1
+  },
+  "R1": {
+   "failing_jdk25": 200,
+   "fixed_jdk25": 62,
+   "failing_jdk26": 70,
+   "fixed_jdk26": 28,
+   "revisions_with_S4": 163,
+   "rev_hang_jdk25": 74,
+   "rev_hang_jdk26": 0
+  }
+ }
+}

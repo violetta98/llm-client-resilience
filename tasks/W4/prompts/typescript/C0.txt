@@ -1,0 +1,9 @@
+Write a TypeScript function (Node.js 26, ES module):
+  export async function cancelSubscription(baseUrl: string, subscriptionId: string): Promise<void>
+It cancels the subscription. Throw a SubscriptionError if the subscription cannot be canceled.
+API: DELETE {baseUrl}/v1/subscriptions/{subscriptionId}
+  200: canceled, JSON {id, status}. 404: subscription not found or already canceled.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Node.js 26 (built-in fetch), axios, got, ky, p-retry.
+Respond with the complete code in a single code block.

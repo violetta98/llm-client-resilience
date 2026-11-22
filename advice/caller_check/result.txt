@@ -1,0 +1,7 @@
+# D57 caller-cancellation checks, containers without network, 2026-11-21
+ts-signal-caller, caller aborts after 1 s: ProfileError after 1.0 s
+go-context-caller, caller context ends after 1 s: error=true after 1.0 s
+go-retry-budget, caller context ends after 1 s: error=true after 1.0 s
+go-idem-key, caller context ends after 1 s: error=true after 1.0 s
+py-retry-budget, deadline_s=1: ProfileError after 1.0 s
+py-idem-key, deadline_s=1: PaymentError after 1.0 s

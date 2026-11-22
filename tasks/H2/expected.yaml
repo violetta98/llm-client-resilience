@@ -1,0 +1,82 @@
+task: H2
+title: Report the readiness of a dependency
+group: handler
+status: frozen with protocol v1 (E6)
+time_limit_s: 1
+overrun_threshold_s: 1.25
+dependencies:
+  A:
+    name: dependency
+    port: 9001
+fault_dependency: A
+faulted_request: GET {dependency_url}/healthz (the only request)
+logical_call_key: instance path
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: true
+degraded_result:
+  value: false
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - degraded
+  S2:
+  - correct
+  - degraded
+  S3:
+  - correct
+  - degraded
+  S4:
+  - correct
+  - degraded
+  S5a:
+  - correct
+  - degraded
+  S5b:
+  - correct
+  - degraded
+  S6a:
+  - correct
+  - degraded
+  S6b:
+  - correct
+  - degraded
+  S7:
+  - degraded
+  S9:
+  - correct
+  - degraded
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: '"Not ready" (false) within 1 s.'
+args:
+  warmup:
+  - '{A}/instances/db-00'
+  single:
+  - '{A}/instances/db-42'
+  s7:
+  - - '{A}/instances/db-10'
+  - - '{A}/instances/db-11'
+  - - '{A}/instances/db-12'
+  - - '{A}/instances/db-13'
+  - - '{A}/instances/db-14'
+  - - '{A}/instances/db-15'
+  - - '{A}/instances/db-16'
+  - - '{A}/instances/db-17'
+  - - '{A}/instances/db-18'
+  - - '{A}/instances/db-19'

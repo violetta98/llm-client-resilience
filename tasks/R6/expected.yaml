@@ -1,0 +1,94 @@
+task: R6
+title: Fetch the stock levels of a product across warehouses
+group: read
+status: confirmatory replication task (added after the protocol-v1 freeze; tasks/CONFIRM_TASKS.md)
+time_limit_s: null
+overrun_threshold_s: null
+dependencies:
+  A:
+    name: inventory service
+    port: 9001
+fault_dependency: A
+faulted_request: GET /v1/products/{product_id}/stock (the only request)
+logical_call_key: product_id
+connection_faults_scope: 'S1, S2, S9: every connection to the faulted dependency from the start of the run'
+state_changing: false
+scenarios:
+- S0
+- S1
+- S2
+- S3
+- S4
+- S5a
+- S5b
+- S6a
+- S6b
+- S7
+- S9
+correct_result:
+  value: the stock object of prd-042 (24 warehouses) as defined in the mock data
+degraded_result: null
+effects_constraint: null
+allowed_outcomes:
+  S0:
+  - correct
+  S1:
+  - correct
+  - error
+  S2:
+  - correct
+  - error
+  S3:
+  - correct
+  - error
+  S4:
+  - correct
+  - error
+  S5a:
+  - correct
+  - error
+  S5b:
+  - correct
+  - error
+  S6a:
+  - correct
+  - error
+  S6b:
+  - correct
+  - error
+  S7:
+  - correct
+  - error
+  S9:
+  - correct
+  - error
+silent_failure: any returned value that is neither the correct nor the allowed degraded result (Table V)
+table_iv: Correct result, or an error.
+args:
+  warmup:
+  - '{A}'
+  - prd-000
+  single:
+  - '{A}'
+  - prd-042
+  s7:
+  - - '{A}'
+    - prd-100
+  - - '{A}'
+    - prd-101
+  - - '{A}'
+    - prd-102
+  - - '{A}'
+    - prd-103
+  - - '{A}'
+    - prd-104
+  - - '{A}'
+    - prd-105
+  - - '{A}'
+    - prd-106
+  - - '{A}'
+    - prd-107
+  - - '{A}'
+    - prd-108
+  - - '{A}'
+    - prd-109

@@ -1,0 +1,74 @@
+{
+ "task": "B2",
+ "deps": [
+  "A"
+ ],
+ "status": "frozen with protocol v1 (E6)",
+ "warmup_args": [
+  "{A}",
+  "exp-000"
+ ],
+ "single_args": [
+  "{A}",
+  "exp-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "exp-100"
+  ],
+  [
+   "{A}",
+   "exp-101"
+  ],
+  [
+   "{A}",
+   "exp-102"
+  ],
+  [
+   "{A}",
+   "exp-103"
+  ],
+  [
+   "{A}",
+   "exp-104"
+  ],
+  [
+   "{A}",
+   "exp-105"
+  ],
+  [
+   "{A}",
+   "exp-106"
+  ],
+  [
+   "{A}",
+   "exp-107"
+  ],
+  [
+   "{A}",
+   "exp-108"
+  ],
+  [
+   "{A}",
+   "exp-109"
+  ]
+ ],
+ "python": {
+  "function": "wait_for_export",
+  "signature": "def wait_for_export(base_url: str, export_id: str) -> str"
+ },
+ "typescript": {
+  "function": "waitForExport",
+  "signature": "export async function waitForExport(baseUrl: string, exportId: string): Promise<string>"
+ },
+ "java": {
+  "function": "waitForExport",
+  "signature": "public static String waitForExport(String baseUrl, String exportId) throws ExportException",
+  "class": "ExportWaiter"
+ },
+ "go": {
+  "function": "WaitForExport",
+  "signature": "func WaitForExport(baseURL, exportID string) (string, error)"
+ }
+}

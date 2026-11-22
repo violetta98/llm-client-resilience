@@ -1,0 +1,10 @@
+Write a Go function:
+  func SearchProducts(baseURL, query, category string, maxPrice float64) ([]map[string]any, error)
+It searches the product catalog and returns the list of matching products (the "items" array of the
+response). Return an error if the search cannot be performed.
+API: GET {baseURL}/v1/products?q={query}&category={category}&max_price={maxPrice}
+  200: JSON {items: [{id, name, category, price}], total}. 400: invalid parameters.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+Respond with the complete code in a single code block.

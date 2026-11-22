@@ -1,0 +1,212 @@
+[
+ {
+  "task": "R1",
+  "lang": "python",
+  "variant": "BASELINE-aiohttp-get",
+  "path": "baselines/aiohttp/get.py",
+  "library": "aiohttp"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-aiohttp-post",
+  "path": "baselines/aiohttp/post.py",
+  "library": "aiohttp"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "BASELINE-apache-httpclient5-get",
+  "path": "baselines/apache-httpclient5/get.java",
+  "library": "apache-httpclient5"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-apache-httpclient5-post",
+  "path": "baselines/apache-httpclient5/post.java",
+  "library": "apache-httpclient5"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "BASELINE-axios-get",
+  "path": "baselines/axios/get.ts",
+  "library": "axios"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-axios-post",
+  "path": "baselines/axios/post.ts",
+  "library": "axios"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "BASELINE-fetch-get",
+  "path": "baselines/fetch/get.ts",
+  "library": "fetch"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-fetch-post",
+  "path": "baselines/fetch/post.ts",
+  "library": "fetch"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "BASELINE-go-retryablehttp-get",
+  "path": "baselines/go-retryablehttp/get.go",
+  "library": "go-retryablehttp"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-go-retryablehttp-post",
+  "path": "baselines/go-retryablehttp/post.go",
+  "library": "go-retryablehttp"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "BASELINE-got-get",
+  "path": "baselines/got/get.ts",
+  "library": "got"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-got-post",
+  "path": "baselines/got/post.ts",
+  "library": "got"
+ },
+ {
+  "task": "R1",
+  "lang": "python",
+  "variant": "BASELINE-httpx-get",
+  "path": "baselines/httpx/get.py",
+  "library": "httpx"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-httpx-post",
+  "path": "baselines/httpx/post.py",
+  "library": "httpx"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "BASELINE-java.net.http-get",
+  "path": "baselines/java.net.http/get.java",
+  "library": "java.net.http"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-java.net.http-post",
+  "path": "baselines/java.net.http/post.java",
+  "library": "java.net.http"
+ },
+ {
+  "task": "R1",
+  "lang": "typescript",
+  "variant": "BASELINE-ky-get",
+  "path": "baselines/ky/get.ts",
+  "library": "ky"
+ },
+ {
+  "task": "W2",
+  "lang": "typescript",
+  "variant": "BASELINE-ky-post",
+  "path": "baselines/ky/post.ts",
+  "library": "ky"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "BASELINE-net-http-get",
+  "path": "baselines/net-http/get.go",
+  "library": "net-http"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-net-http-post",
+  "path": "baselines/net-http/post.go",
+  "library": "net-http"
+ },
+ {
+  "task": "R1",
+  "lang": "java",
+  "variant": "BASELINE-okhttp-get",
+  "path": "baselines/okhttp/get.java",
+  "library": "okhttp"
+ },
+ {
+  "task": "W2",
+  "lang": "java",
+  "variant": "BASELINE-okhttp-post",
+  "path": "baselines/okhttp/post.java",
+  "library": "okhttp"
+ },
+ {
+  "task": "R1",
+  "lang": "python",
+  "variant": "BASELINE-requests-get",
+  "path": "baselines/requests/get.py",
+  "library": "requests"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-requests-post",
+  "path": "baselines/requests/post.py",
+  "library": "requests"
+ },
+ {
+  "task": "R1",
+  "lang": "go",
+  "variant": "BASELINE-resty-get",
+  "path": "baselines/resty/get.go",
+  "library": "resty"
+ },
+ {
+  "task": "W2",
+  "lang": "go",
+  "variant": "BASELINE-resty-post",
+  "path": "baselines/resty/post.go",
+  "library": "resty"
+ },
+ {
+  "task": "R1",
+  "lang": "python",
+  "variant": "BASELINE-urllib.request-get",
+  "path": "baselines/urllib.request/get.py",
+  "library": "urllib.request"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-urllib.request-post",
+  "path": "baselines/urllib.request/post.py",
+  "library": "urllib.request"
+ },
+ {
+  "task": "R1",
+  "lang": "python",
+  "variant": "BASELINE-urllib3-get",
+  "path": "baselines/urllib3/get.py",
+  "library": "urllib3"
+ },
+ {
+  "task": "W2",
+  "lang": "python",
+  "variant": "BASELINE-urllib3-post",
+  "path": "baselines/urllib3/post.py",
+  "library": "urllib3"
+ }
+]

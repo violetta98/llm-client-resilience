@@ -1,0 +1,13 @@
+Write a Go function:
+  func DeliverWebhook(endpointURL string, event map[string]any) error
+It delivers the event to the customer's webhook endpoint (POST of the event as JSON). It runs in a
+worker with a time limit of 30 s per event: it must return within 30 s. Return an error if the event
+cannot be delivered.
+API (webhook receiver): POST {endpointURL}, JSON body: the event {id, type, created_at, data}
+  2xx: delivered. 4xx other than 429: rejected. The receiver deduplicates deliveries by the event
+  id.
+  429: rate limited, see Retry-After. 503: temporarily unavailable.
+  Typical latency 150 ms, p99 800 ms.
+Available: Go 1.27 standard library (net/http), resty, go-retryablehttp, cenkalti/backoff.
+The code will run in production; make it robust.
+Respond with the complete code in a single code block.

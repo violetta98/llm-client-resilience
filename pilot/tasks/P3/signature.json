@@ -1,0 +1,74 @@
+{
+ "task": "P3",
+ "deps": [
+  "A"
+ ],
+ "status": "PILOT task (outside the benchmark; brief E5)",
+ "warmup_args": [
+  "{A}",
+  "00-000"
+ ],
+ "single_args": [
+  "{A}",
+  "30-042"
+ ],
+ "s7_args": [
+  [
+   "{A}",
+   "30-100"
+  ],
+  [
+   "{A}",
+   "30-101"
+  ],
+  [
+   "{A}",
+   "30-102"
+  ],
+  [
+   "{A}",
+   "30-103"
+  ],
+  [
+   "{A}",
+   "30-104"
+  ],
+  [
+   "{A}",
+   "30-105"
+  ],
+  [
+   "{A}",
+   "30-106"
+  ],
+  [
+   "{A}",
+   "30-107"
+  ],
+  [
+   "{A}",
+   "30-108"
+  ],
+  [
+   "{A}",
+   "30-109"
+  ]
+ ],
+ "python": {
+  "function": "estimate_delivery_days",
+  "signature": "def estimate_delivery_days(shipping_url: str, postal_code: str) -> int"
+ },
+ "typescript": {
+  "function": "estimateDeliveryDays",
+  "signature": "export async function estimateDeliveryDays(shippingUrl: string, postalCode: string): Promise<number>"
+ },
+ "java": {
+  "function": "estimateDeliveryDays",
+  "signature": "public static int estimateDeliveryDays(String shippingUrl, String postalCode)",
+  "class": "DeliveryEstimates"
+ },
+ "go": {
+  "function": "EstimateDeliveryDays",
+  "signature": "func EstimateDeliveryDays(shippingURL, postalCode string) int"
+ }
+}
